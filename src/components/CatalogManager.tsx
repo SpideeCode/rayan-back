@@ -98,17 +98,17 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
 
             <div style={{ flex: 1, padding: '32px' }}>
                 {/* Search Bar and Filters */}
-                <div style={{ 
-                    position: 'sticky', 
-                    top: 0, 
-                    zIndex: 10, 
+                <div style={{
+                    position: 'sticky',
+                    top: '88px',
+                    zIndex: 90,
                     backgroundColor: 'var(--background)',
                     margin: '-32px -32px 32px -32px',
                     padding: '32px',
-                    display: 'flex', 
-                    gap: '16px', 
-                    flexWrap: 'wrap', 
-                    alignItems: 'center' 
+                    display: 'flex',
+                    gap: '16px',
+                    flexWrap: 'wrap',
+                    alignItems: 'center'
                 }}>
                     <div style={{ position: 'relative', flex: '1 1 300px', maxWidth: '600px' }}>
                         <Search size={20} color="#999" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
