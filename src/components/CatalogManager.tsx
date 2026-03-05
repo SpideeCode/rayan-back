@@ -92,8 +92,8 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
                     gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
                     gap: '24px'
                 }}>
-                    {visibleData.map(product => (
-                        <ProductCard key={product.id} product={product} />
+                    {visibleData.map((product, index) => (
+                        <ProductCard key={product.id} product={product} priority={index < 4} />
                     ))}
                 </div>
 

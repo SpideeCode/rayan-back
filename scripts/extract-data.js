@@ -9,9 +9,44 @@ const outputFile = path.join(process.cwd(), 'public', 'database.json');
 async function processImages() {
   const files = fs.readdirSync(itemsDir).filter(f => f.match(/\.(png|jpe?g)$/i));
   const database = [];
-  
+  const seenIds = new Set();
+
   // Initialize Tesseract Worker
   const worker = await Tesseract.createWorker('fra');
+
+  // Dictionary for contextual correction
+  const corrections = {
+    "faurchatte": "Fourchette",
+    "falrchatte": "Fourchette",
+    "salacher": "Saladier",
+    "serviuties": "Serviettes",
+    "serviet": "Serviettes",
+    "gobaiel": "Gobelet",
+    "gobslet": "Gobelet",
+    "couteeu": "Couteau",
+    "couvesrt": "Couvert",
+    "bols": "Bol",
+    "etes": "Frites",
+    "as assiettes": "Assiettes"
+  };
+
+  function applyCorrections(name) {
+    let correctedName = name;
+    for (const [wrong, right] of Object.entries(corrections)) {
+      const regex = new RegExp(`\\b${wrong}\\b`, 'gi');
+      if (correctedName.match(regex)) {
+        correctedName = correctedName.replace(regex, right);
+      }
+    }
+    return correctedName.charAt(0).toUpperCase() + correctedName.slice(1);
+  }
+
+  // Heuristic fallback categories
+  const categoryFallbacks = {
+    "00-20": "Boîte", "00-21": "Boîte", "00-22": "Barquette", "00-23": "Barquette",
+    "00-24": "Pot", "00-25": "Gobelet", "00-26": "Assiette", "00-27": "Couvert",
+    "00-28": "Sachet plastique", "00-29": "Sac papier", "00-30": "Serviette", "00-31": "Accessoire"
+  };
 
   console.log(`Starting OCR on ${files.length} images...`);
 
@@ -19,37 +54,60 @@ async function processImages() {
     const file = files[i];
     const filePath = path.join(itemsDir, file);
     try {
-      console.log(`[${i+1}/${files.length}] Processing: ${file}`);
-      
-      // Step 1: Pre-processing with Sharp (Grayscale to improve OCR precision by 30%)
+      console.log(`[${i + 1}/${files.length}] Processing: ${file}`);
+
+      // Aggressive Pre-processing with Sharp: Crop specifically to the Bottom holding the Name in bold
+      const metadata = await sharp(filePath).metadata();
+      const cropTop = Math.floor(metadata.height * 0.60); // Start at 60% down
+      const cropHeight = Math.floor(metadata.height * 0.35); // Scan from 60% to 95% down
+      const cropLeft = Math.floor(metadata.width * 0.05); // Margin
+      const cropWidth = Math.floor(metadata.width * 0.90); // Margin
+
       const buffer = await sharp(filePath)
-        .grayscale()
+        .extract({ left: cropLeft, top: cropTop, width: cropWidth, height: cropHeight })
+        .resize({ width: 1200, withoutEnlargement: true }) // Upscale to improve reading
+        .normalize() // Maximize contrast
+        .grayscale() // Convert to gray
+        .threshold(140) // Heavy threshold to kill backgrounds/logos
         .toBuffer();
 
       // Step 2: Extract text
       const ret = await worker.recognize(buffer);
       const text = ret.data.text;
 
-      // Extract Reference (Strict Regex: \d{2}-\d{4})
-      const idMatch = text.match(/\b(\d{2}-\d{4})\b/);
+      // Extract Reference. ALWAYS Prioritize identifying ID from filename.
+      const nameMatch = file.match(/(\d{2}-\d{4})/);
       let id = "";
-      if (idMatch) {
-         id = idMatch[1];
+      if (nameMatch) {
+        id = nameMatch[1];
       } else {
-         const nameMatch = file.match(/(\d{2}-\d{4})/);
-         id = nameMatch ? nameMatch[1] : `ID-${Math.random().toString(36).substr(2, 6).toUpperCase()}`;
+        const fullBufferText = (await worker.recognize(await sharp(filePath).grayscale().toBuffer())).data.text;
+        const idMatch = fullBufferText.match(/\b(\d{2}-\d{4})\b/);
+        id = idMatch ? idMatch[1] : `ID-${Math.random().toString(36).substr(2, 6).toUpperCase()}`;
       }
 
       // Name extraction
-      const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 2);
-      // Remove lines consisting primarily of the id
-      const nameLines = lines.filter(l => !l.match(/\d{2}-\d{4}/));
-      let name = nameLines.length > 0 ? nameLines[0] : "Produit " + id;
-      name = name.replace(/^[^a-zA-Z0-9À-ÿ]+/, ''); // Clean up special chars at string start
+      let lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 2);
+      lines = lines.filter(l => !l.match(/\d{2}-\d{4}/) && !l.match(/^[_\W0-9]+$/)); // Remove ID strings & gibberish
 
-      // Characteristics tags
-      const tagRegex = /\b(PS|PET|PP|Carton|Aluminium|PLA|CPLA|Bagasse|Papier|\d+(?:,\d+)?\s*(?:ml|cl|L|oz|mm|cm|g))\b/gi;
-      const allTagsMatches = text.match(tagRegex);
+      let name = "";
+      if (lines.length > 0) {
+        name = lines[0];
+        name = name.replace(/^[^a-zA-Z0-9À-ÿ]+/, ''); // Clean up start
+        name = applyCorrections(name);
+      }
+
+      // Fallback
+      if (name.length < 4 || name.match(/^[_\W0-9]+$/)) {
+        const prefix = id.substring(0, 5);
+        name = `${categoryFallbacks[prefix] || "Article"} ${id}`;
+      }
+
+      // Characteristics tags (run on full image to catch small text)
+      const fullBuffer = await sharp(filePath).grayscale().toBuffer();
+      const fullText = (await worker.recognize(fullBuffer)).data.text;
+      const tagRegex = /\b(PS|PET|PP|Carton|Aluminium|PLA|CPLA|Bagasse|Papier|\d+(?:[.,]\d+)?\s*(?:ml|cl|L|oz|mm|cm|g))\b/gi;
+      const allTagsMatches = fullText.match(tagRegex);
       let tags = [];
       if (allTagsMatches) {
         tags = [...new Set(allTagsMatches.map(t => t.toUpperCase().replace(/\s/g, '')))];
