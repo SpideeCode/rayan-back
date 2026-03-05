@@ -9,6 +9,7 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
     const [search, setSearch] = useState('');
     const [category, setCategory] = useState('Toutes');
     const [visibleCount, setVisibleCount] = useState(20);
+    const [sortBy, setSortBy] = useState('id-asc');
 
     // Derive categories
     const categories = useMemo(() => {
@@ -40,8 +41,25 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
             result = result.filter(item => item.category === category);
         }
 
+        // Copy array before sorting to avoid mutating read-only state
+        result = [...result];
+
+        // Sort logic
+        result.sort((a, b) => {
+            if (sortBy === 'name-asc') {
+                return a.name.localeCompare(b.name, 'fr', { numeric: true });
+            } else if (sortBy === 'name-desc') {
+                return b.name.localeCompare(a.name, 'fr', { numeric: true });
+            } else if (sortBy === 'id-asc') {
+                return a.id.localeCompare(b.id, 'fr', { numeric: true });
+            } else if (sortBy === 'id-desc') {
+                return b.id.localeCompare(a.id, 'fr', { numeric: true });
+            }
+            return 0;
+        });
+
         return result;
-    }, [initialData, search, category, fuse]);
+    }, [initialData, search, category, sortBy, fuse]);
 
     const visibleData = filteredData.slice(0, visibleCount);
 
@@ -67,23 +85,46 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
             <Sidebar categories={categories} selected={category} onSelect={setCategory} />
 
             <div style={{ flex: 1, padding: '32px' }}>
-                {/* Search Bar */}
-                <div style={{ marginBottom: '32px', position: 'relative', maxWidth: '600px' }}>
-                    <Search size={20} color="#999" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
-                    <input
-                        type="text"
-                        placeholder="Rechercher une référence ou un nom (ex: 00-2539)"
-                        value={search}
-                        onChange={(e) => { setSearch(e.target.value); setVisibleCount(20); }}
-                        style={{
-                            width: '100%',
-                            padding: '16px 16px 16px 48px',
-                            fontSize: '16px',
-                            border: '1px solid var(--border)',
-                            backgroundColor: 'var(--card-bg)',
-                            outline: 'none',
-                        }}
-                    />
+                {/* Search Bar and Filters */}
+                <div style={{ marginBottom: '32px', display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <div style={{ position: 'relative', flex: '1 1 300px', maxWidth: '600px' }}>
+                        <Search size={20} color="#999" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
+                        <input
+                            type="text"
+                            placeholder="Rechercher une référence ou un nom (ex: 00-2539)"
+                            value={search}
+                            onChange={(e) => { setSearch(e.target.value); setVisibleCount(20); }}
+                            style={{
+                                width: '100%',
+                                padding: '16px 16px 16px 48px',
+                                fontSize: '16px',
+                                border: '1px solid var(--border)',
+                                backgroundColor: 'var(--card-bg)',
+                                outline: 'none',
+                            }}
+                        />
+                    </div>
+
+                    {/* Sort Dropdown */}
+                    <div style={{ flexShrink: 0 }}>
+                        <select
+                            value={sortBy}
+                            onChange={(e) => { setSortBy(e.target.value); setVisibleCount(20); }}
+                            style={{
+                                padding: '16px',
+                                fontSize: '16px',
+                                border: '1px solid var(--border)',
+                                backgroundColor: 'var(--card-bg)',
+                                outline: 'none',
+                                cursor: 'pointer',
+                            }}
+                        >
+                            <option value="id-asc">Référence (0 - 9)</option>
+                            <option value="id-desc">Référence (9 - 0)</option>
+                            <option value="name-asc">Nom (A - Z)</option>
+                            <option value="name-desc">Nom (Z - A)</option>
+                        </select>
+                    </div>
                 </div>
 
                 {/* Product Grid */}
