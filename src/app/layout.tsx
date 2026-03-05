@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Image from 'next/image'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -30,7 +31,15 @@ export default function RootLayout({
             alignItems: 'center',
             justifyContent: 'space-between'
           }}>
-            <h1 style={{ fontSize: '24px', fontWeight: 700, letterSpacing: '-0.5px' }}>RAYAN-BACK</h1>
+            <div style={{ position: 'relative', height: '40px', width: '150px' }}>
+              <Image
+                src="/logo.png"
+                alt="RAYAN-BACK Logo"
+                fill
+                style={{ objectFit: 'contain', objectPosition: 'left' }}
+                priority
+              />
+            </div>
           </header>
 
           <main style={{ flex: 1 }}>
