@@ -1,39 +1,92 @@
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+
 export default function Sidebar({ categories, selected, onSelect }: { categories: string[], selected: string, onSelect: (c: string) => void }) {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleSelect = (c: string) => {
+        onSelect(c);
+        setIsOpen(false);
+    };
+
     return (
-        <aside style={{ width: '250px', padding: '32px 24px', flexShrink: 0, borderRight: '1px solid var(--border)', position: 'sticky', top: '76px', height: 'calc(100vh - 76px)', overflowY: 'auto' }}>
-            <h2 style={{ fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '24px', color: '#666' }}>
-                Catégories
-            </h2>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <li>
-                    <button
-                        onClick={() => onSelect('Toutes')}
-                        style={{
-                            background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer',
-                            fontSize: '16px', display: 'block', width: '100%',
-                            fontWeight: selected === 'Toutes' ? 700 : 400,
-                            textDecoration: selected === 'Toutes' ? 'underline' : 'none'
-                        }}
-                    >
-                        Toutes
-                    </button>
-                </li>
-                {categories.map(c => (
-                    <li key={c}>
+        <>
+            {/* Desktop Sidebar */}
+            <aside className="sidebar-desktop">
+                <h2 style={{ fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '24px', color: '#666' }}>
+                    Catégories
+                </h2>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                    <li>
                         <button
-                            onClick={() => onSelect(c)}
+                            onClick={() => onSelect('Toutes')}
+                            className="cat-btn cat-btn-desktop"
                             style={{
-                                background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer',
-                                fontSize: '16px', display: 'block', width: '100%',
-                                fontWeight: selected === c ? 700 : 400,
-                                textDecoration: selected === c ? 'underline' : 'none'
+                                fontWeight: selected === 'Toutes' ? 700 : 400,
+                                textDecoration: selected === 'Toutes' ? 'underline' : 'none'
                             }}
                         >
-                            {c}
+                            Toutes
                         </button>
                     </li>
-                ))}
-            </ul>
-        </aside>
+                    {categories.map(c => (
+                        <li key={c}>
+                            <button
+                                onClick={() => onSelect(c)}
+                                className="cat-btn cat-btn-desktop"
+                                style={{
+                                    fontWeight: selected === c ? 700 : 400,
+                                    textDecoration: selected === c ? 'underline' : 'none'
+                                }}
+                            >
+                                {c}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </aside>
+
+            {/* Mobile Sidebar (Hamburger Menu) */}
+            <div className="sidebar-mobile-toggle">
+                <button
+                    onClick={() => setIsOpen(true)}
+                    className="hamburger-btn"
+                >
+                    <Menu size={20} />
+                    <span>Catégories ({selected})</span>
+                </button>
+            </div>
+
+            {/* Mobile Drawer */}
+            {isOpen && (
+                <div className="mobile-drawer-backdrop" onClick={() => setIsOpen(false)}>
+                    <div className="mobile-drawer" onClick={e => e.stopPropagation()}>
+                        <div className="mobile-drawer-header">
+                            <h2 style={{ fontSize: '16px', fontWeight: 700 }}>Catégories</h2>
+                            <button onClick={() => setIsOpen(false)} className="close-drawer-btn">
+                                <X size={24} color="#666" />
+                            </button>
+                        </div>
+                        <div className="mobile-drawer-content">
+                            <button
+                                onClick={() => handleSelect('Toutes')}
+                                className={`drawer-cat-btn ${selected === 'Toutes' ? 'active' : ''}`}
+                            >
+                                Toutes
+                            </button>
+                            {categories.map(c => (
+                                <button
+                                    key={c}
+                                    onClick={() => handleSelect(c)}
+                                    className={`drawer-cat-btn ${selected === c ? 'active' : ''}`}
+                                >
+                                    {c}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
     );
 }

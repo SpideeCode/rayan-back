@@ -20,18 +20,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
           {/* Main Header */}
-          <header style={{
-            backgroundColor: 'var(--primary)',
-            color: 'var(--primary-foreground)',
-            padding: '24px 48px',
-            position: 'sticky',
-            top: 0,
-            zIndex: 100,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between'
-          }}>
-            <div style={{ position: 'relative', height: '40px', width: '150px' }}>
+          <header className="site-header">
+            <div className="site-logo">
               <Image
                 src="/logo.png"
                 alt="RAYAN-BACK Logo"

@@ -26,24 +26,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         <>
             <div
                 onClick={() => { setIsModalOpen(true); }}
-                style={{
-                    background: 'var(--card-bg)',
-                    border: '1px solid var(--border)',
-                    cursor: 'default',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                    overflow: 'hidden',
-                    position: 'relative',
-                }}
-                onMouseEnter={e => {
-                    e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.06)';
-                }}
-                onMouseLeave={e => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
-                }}
+                className="product-card"
             >
                 <div style={{ position: 'relative', width: '100%', paddingBottom: '100%', backgroundColor: '#f6f7f8' }}>
                     {!(priority || imageLoaded) && <div className="skeleton" style={{ position: 'absolute', inset: 0 }} />}
@@ -80,26 +63,19 @@ export default function ProductCard({ product, priority = false }: { product: Pr
             {isModalOpen && (
                 <div
                     onClick={() => setIsModalOpen(false)}
-                    style={{
-                        position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        zIndex: 1000, padding: '16px'
-                    }}
+                    className="modal-backdrop"
                 >
                     <div
                         onClick={e => e.stopPropagation()}
-                        style={{
-                            background: '#fff', padding: '32px', maxWidth: '500px', width: '100%',
-                            position: 'relative', display: 'flex', flexDirection: 'column', gap: '24px'
-                        }}
+                        className="modal-content"
                     >
                         <button
                             onClick={() => setIsModalOpen(false)}
-                            style={{ position: 'absolute', top: '16px', right: '16px', background: 'none', border: 'none', cursor: 'pointer' }}
+                            className="modal-close-btn"
                         >
                             <X size={24} color="#666" />
                         </button>
-                        <div style={{ position: 'relative', width: '100%', height: '300px', backgroundColor: '#f9f9f9' }}>
+                        <div className="modal-image-wrapper">
                             <Image
                                 src={product.image}
                                 alt={product.name}
@@ -109,17 +85,12 @@ export default function ProductCard({ product, priority = false }: { product: Pr
                         </div>
                         <div>
                             <span style={{ fontSize: '14px', fontWeight: 600, color: '#666' }}>{product.id}</span>
-                            <h2 style={{ fontSize: '24px', fontWeight: 700, margin: '8px 0' }}>{product.name}</h2>
-                            <p style={{ fontSize: '14px', color: '#666', marginBottom: '16px' }}>Catégorie : {product.category}</p>
+                            <h2 style={{ fontSize: '20px', fontWeight: 700, margin: '8px 0', lineHeight: 1.2 }}>{product.name}</h2>
+                            <p style={{ fontSize: '14px', color: '#666', marginBottom: '8px' }}>Catégorie : {product.category}</p>
                         </div>
                         <button
                             onClick={handleWhatsApp}
-                            style={{
-                                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                                backgroundColor: 'var(--whatsapp)', color: '#fff', border: 'none',
-                                padding: '16px', fontSize: '16px', fontWeight: 600, cursor: 'pointer',
-                                width: '100%'
-                            }}
+                            className="whatsapp-btn"
                         >
                             <MessageCircle size={20} />
                             Commander sur WhatsApp

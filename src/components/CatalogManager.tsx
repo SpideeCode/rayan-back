@@ -89,58 +89,29 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
     }, [visibleCount, filteredData.length]);
 
     return (
-        <div style={{ display: 'flex', minHeight: '100%' }}>
-            {/* Sidebar - hidden on mobile, or toggleable ideally, but inline for simple desktop view */}
-            <div className="sidebar-container" style={{ display: 'none' }}>
-                {/* Responsive CSS can handle this later, for now we keep it visible on larger screens */}
-            </div>
+        <div className="layout-container">
             <Sidebar categories={categories} selected={category} onSelect={setCategory} />
 
-            <div style={{ flex: 1, padding: '32px' }}>
+            <div className="catalog-main">
                 {/* Search Bar and Filters */}
-                <div style={{
-                    position: 'sticky',
-                    top: '88px',
-                    zIndex: 90,
-                    backgroundColor: 'var(--background)',
-                    margin: '-32px -32px 32px -32px',
-                    padding: '32px',
-                    display: 'flex',
-                    gap: '16px',
-                    flexWrap: 'wrap',
-                    alignItems: 'center'
-                }}>
-                    <div style={{ position: 'relative', flex: '1 1 300px', maxWidth: '600px' }}>
-                        <Search size={20} color="#999" style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)' }} />
+                <div className="search-container">
+                    <div className="search-input-wrapper">
+                        <Search size={20} color="#999" className="search-icon" />
                         <input
                             type="text"
                             placeholder="Rechercher une référence ou un nom (ex: 00-2539)"
                             value={search}
                             onChange={(e) => { setSearch(e.target.value); setVisibleCount(20); }}
-                            style={{
-                                width: '100%',
-                                padding: '16px 16px 16px 48px',
-                                fontSize: '16px',
-                                border: '1px solid var(--border)',
-                                backgroundColor: 'var(--card-bg)',
-                                outline: 'none',
-                            }}
+                            className="search-input"
                         />
                     </div>
 
                     {/* Sort Dropdown */}
-                    <div style={{ flexShrink: 0 }}>
+                    <div style={{ flexShrink: 0, width: '100%' }} className="sort-dropdown-wrapper">
                         <select
                             value={sortBy}
                             onChange={(e) => { setSortBy(e.target.value); setVisibleCount(20); }}
-                            style={{
-                                padding: '16px',
-                                fontSize: '16px',
-                                border: '1px solid var(--border)',
-                                backgroundColor: 'var(--card-bg)',
-                                outline: 'none',
-                                cursor: 'pointer',
-                            }}
+                            className="sort-select"
                         >
                             <option value="id-asc">Référence (0 - 9)</option>
                             <option value="id-desc">Référence (9 - 0)</option>
@@ -151,11 +122,7 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
                 </div>
 
                 {/* Product Grid */}
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-                    gap: '24px'
-                }}>
+                <div className="grid-container">
                     {visibleData.map((product, index) => (
                         <ProductCard key={product.id} product={product} priority={index < 12} />
                     ))}
