@@ -10,14 +10,9 @@ export type Product = {
     image: string;
 };
 
-export default function ProductCard({ product: initialProduct, priority = false }: { product: Product, priority?: boolean }) {
-    const [product, setProduct] = useState(initialProduct);
+export default function ProductCard({ product, priority = false }: { product: Product, priority?: boolean }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
-    const [editId, setEditId] = useState(product.id);
-    const [editName, setEditName] = useState(product.name);
-    const [editCategory, setEditCategory] = useState(product.category);
-    const [isSaving, setIsSaving] = useState(false);
 
     const handleWhatsApp = () => {
         // We assume the phone number is +33 6 XX XX XX XX or similar, here is a placeholder
@@ -25,37 +20,6 @@ export default function ProductCard({ product: initialProduct, priority = false 
         const message = `Bonjour, je souhaite commander l'article :\n\n*${product.name}*\nRéférence : ${product.id}\n\nPouvez-vous m'indiquer la disponibilité ?`;
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
-    };
-
-    const handleSave = async (e: React.MouseEvent) => {
-        e.stopPropagation();
-        if (!editId || !editName) return;
-
-        setIsSaving(true);
-        try {
-            const res = await fetch('/api/update-product', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    originalId: product.id,
-                    newId: editId,
-                    newName: editName,
-                    newCategory: editCategory
-                })
-            });
-
-            if (res.ok) {
-                const data = await res.json();
-                setProduct(data.product);
-            } else {
-                alert('Erreur lors de la sauvegarde');
-            }
-        } catch (err) {
-            console.error(err);
-            alert('Erreur réseau');
-        } finally {
-            setIsSaving(false);
-        }
     };
 
     return (
@@ -95,55 +59,20 @@ export default function ProductCard({ product: initialProduct, priority = false 
                 </div>
 
                 <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                        <input
-                            value={editId}
-                            onChange={e => setEditId(e.target.value)}
-                            onClick={e => e.stopPropagation()}
-                            style={{ padding: '4px', fontSize: '12px', border: '1px solid #ccc' }}
-                        />
-                        <textarea
-                            value={editName}
-                            onChange={e => setEditName(e.target.value)}
-                            onClick={e => e.stopPropagation()}
-                            style={{ padding: '4px', fontSize: '14px', border: '1px solid #ccc', resize: 'vertical' }}
-                        />
-                        <select
-                            value={editCategory}
-                            onChange={e => setEditCategory(e.target.value)}
-                            onClick={e => e.stopPropagation()}
-                            style={{ padding: '4px', fontSize: '12px', border: '1px solid #ccc', background: '#fff' }}
-                        >
-                            <option value="Gobelets">Gobelets</option>
-                            <option value="Couvercles">Couvercles</option>
-                            <option value="Barquettes & Raviers">Barquettes & Raviers</option>
-                            <option value="Boîtes">Boîtes</option>
-                            <option value="Saladiers & Bols">Saladiers & Bols</option>
-                            <option value="Sachets & Sacs">Sachets & Sacs</option>
-                            <option value="Assiettes & Plateaux">Assiettes & Plateaux</option>
-                            <option value="Couverts">Couverts</option>
-                            <option value="Papiers & Hygiène">Papiers & Hygiène</option>
-                            <option value="Entretien">Entretien</option>
-                            <option value="Accessoires">Accessoires</option>
-                            <option value="Autres">Autres</option>
-                        </select>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '4px' }}>
-                            <button
-                                onClick={handleSave}
-                                disabled={isSaving || (editId === product.id && editName === product.name && editCategory === product.category)}
-                                style={{
-                                    padding: '4px 12px',
-                                    background: (editId !== product.id || editName !== product.name || editCategory !== product.category) ? '#0058a3' : '#ccc',
-                                    color: 'white',
-                                    border: 'none',
-                                    borderRadius: '4px',
-                                    cursor: (editId !== product.id || editName !== product.name || editCategory !== product.category) && !isSaving ? 'pointer' : 'default'
-                                }}
-                            >
-                                {isSaving ? 'Sauvegarde...' : '✓ Fix'}
-                            </button>
-                        </div>
+                    <div style={{ fontSize: '13px', fontWeight: 600, color: '#888' }}>{product.id}</div>
+                    <div style={{
+                        fontSize: '15px',
+                        fontWeight: 700,
+                        color: 'var(--foreground)',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                        lineHeight: '1.4'
+                    }}>
+                        {product.name}
                     </div>
+                    <div style={{ fontSize: '13px', color: '#666', marginTop: '4px' }}>{product.category}</div>
                 </div>
             </div>
 
