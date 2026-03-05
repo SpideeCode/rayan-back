@@ -1052,7 +1052,7 @@
   {
     "id": "00-2727",
     "name": "Saladier 150 mm",
-    "category": "Saladiers & Bols",
+    "category": "Couvercles",
     "image": "/items/00-2727.png"
   },
   {
@@ -1070,7 +1070,7 @@
   {
     "id": "00-2732",
     "name": "Saladier 185 mm",
-    "category": "Saladiers & Bols",
+    "category": "Couvercles",
     "image": "/items/00-2732.png"
   },
   {
@@ -1262,7 +1262,7 @@
   {
     "id": "00-2766",
     "name": "Serviettes de table",
-    "category": "Papiers & Hygiène",
+    "category": "Accessoires",
     "image": "/items/00-2766.png"
   },
   {

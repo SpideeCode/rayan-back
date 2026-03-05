@@ -23,7 +23,8 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
             { name: 'id', weight: 2 },
             { name: 'name', weight: 1 }
         ],
-        threshold: 0.3,
+        threshold: 0.2, // Stricter threshold to avoid garbage matches
+        ignoreLocation: true, // Don't penalize words at the end of the name
     }), [initialData]);
 
     // Filter logic
@@ -32,7 +33,19 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
 
         // Search filter
         if (search.trim()) {
-            result = fuse.search(search).map(r => r.item);
+            const term = search.trim();
+            // If the search looks exactly like part of an ID (e.g., '00-2711', '2501')
+            if (/^[0-9-]+$/.test(term)) {
+                const idMatches = initialData.filter(item => item.id.includes(term));
+                if (idMatches.length > 0) {
+                    result = idMatches;
+                } else {
+                    // Fallback to searching names / exact numbers inside names
+                    result = fuse.search(term).map(r => r.item);
+                }
+            } else {
+                result = fuse.search(term).map(r => r.item);
+            }
         }
 
         // Category filter
