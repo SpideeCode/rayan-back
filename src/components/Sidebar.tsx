@@ -1,6 +1,6 @@
 export default function Sidebar({ categories, selected, onSelect }: { categories: string[], selected: string, onSelect: (c: string) => void }) {
     return (
-        <aside style={{ width: '250px', padding: '32px 24px', flexShrink: 0, borderRight: '1px solid var(--border)' }}>
+        <aside style={{ width: '250px', padding: '32px 24px', flexShrink: 0, borderRight: '1px solid var(--border)', position: 'sticky', top: '76px', height: 'calc(100vh - 76px)', overflowY: 'auto' }}>
             <h2 style={{ fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '24px', color: '#666' }}>
                 Catégories
             </h2>

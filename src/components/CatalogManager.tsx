@@ -21,8 +21,7 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
     const fuse = useMemo(() => new Fuse(initialData, {
         keys: [
             { name: 'id', weight: 2 },
-            { name: 'name', weight: 1 },
-            { name: 'tags', weight: 0.5 }
+            { name: 'name', weight: 1 }
         ],
         threshold: 0.3,
     }), [initialData]);
@@ -134,7 +133,7 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
                     gap: '24px'
                 }}>
                     {visibleData.map((product, index) => (
-                        <ProductCard key={product.id} product={product} priority={index < 4} />
+                        <ProductCard key={product.id} product={product} priority={index < 12} />
                     ))}
                 </div>
 

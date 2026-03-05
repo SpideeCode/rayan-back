@@ -4,9 +4,9 @@ import path from 'path';
 
 export async function POST(req: Request) {
     try {
-        const { originalId, newId, newName } = await req.json();
+        const { originalId, newId, newName, newCategory } = await req.json();
 
-        if (!originalId || !newId || !newName) {
+        if (!originalId || !newId || !newName || !newCategory) {
             return NextResponse.json({ error: 'Missing parameters' }, { status: 400 });
         }
 
@@ -48,6 +48,7 @@ export async function POST(req: Request) {
             ...product,
             id: newId,
             name: newName,
+            category: newCategory,
             image: newImagePath
         };
 

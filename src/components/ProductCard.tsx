@@ -8,7 +8,6 @@ export type Product = {
     name: string;
     category: string;
     image: string;
-    tags: string[];
 };
 
 export default function ProductCard({ product: initialProduct, priority = false }: { product: Product, priority?: boolean }) {
@@ -17,6 +16,7 @@ export default function ProductCard({ product: initialProduct, priority = false 
     const [imageLoaded, setImageLoaded] = useState(false);
     const [editId, setEditId] = useState(product.id);
     const [editName, setEditName] = useState(product.name);
+    const [editCategory, setEditCategory] = useState(product.category);
     const [isSaving, setIsSaving] = useState(false);
 
     const handleWhatsApp = () => {
@@ -39,7 +39,8 @@ export default function ProductCard({ product: initialProduct, priority = false 
                 body: JSON.stringify({
                     originalId: product.id,
                     newId: editId,
-                    newName: editName
+                    newName: editName,
+                    newCategory: editCategory
                 })
             });
 
@@ -81,15 +82,14 @@ export default function ProductCard({ product: initialProduct, priority = false 
                 }}
             >
                 <div style={{ position: 'relative', width: '100%', paddingBottom: '100%', backgroundColor: '#f6f7f8' }}>
-
-                    {!imageLoaded && <div className="skeleton" style={{ position: 'absolute', inset: 0 }} />}
+                    {!(priority || imageLoaded) && <div className="skeleton" style={{ position: 'absolute', inset: 0 }} />}
                     <Image
                         src={product.image}
                         alt={product.name}
                         fill
                         priority={priority}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: 'contain', opacity: imageLoaded ? 1 : 0, transition: 'opacity 0.3s ease' }}
+                        style={{ objectFit: 'contain', opacity: (priority || imageLoaded) ? 1 : 0, transition: 'opacity 0.3s ease' }}
                         onLoad={() => setImageLoaded(true)}
                     />
                 </div>
@@ -108,28 +108,40 @@ export default function ProductCard({ product: initialProduct, priority = false 
                             onClick={e => e.stopPropagation()}
                             style={{ padding: '4px', fontSize: '14px', border: '1px solid #ccc', resize: 'vertical' }}
                         />
+                        <select
+                            value={editCategory}
+                            onChange={e => setEditCategory(e.target.value)}
+                            onClick={e => e.stopPropagation()}
+                            style={{ padding: '4px', fontSize: '12px', border: '1px solid #ccc', background: '#fff' }}
+                        >
+                            <option value="Gobelets">Gobelets</option>
+                            <option value="Couvercles">Couvercles</option>
+                            <option value="Barquettes & Raviers">Barquettes & Raviers</option>
+                            <option value="Boîtes">Boîtes</option>
+                            <option value="Saladiers & Bols">Saladiers & Bols</option>
+                            <option value="Sachets & Sacs">Sachets & Sacs</option>
+                            <option value="Assiettes & Plateaux">Assiettes & Plateaux</option>
+                            <option value="Couverts">Couverts</option>
+                            <option value="Papiers & Hygiène">Papiers & Hygiène</option>
+                            <option value="Entretien">Entretien</option>
+                            <option value="Accessoires">Accessoires</option>
+                            <option value="Autres">Autres</option>
+                        </select>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '4px' }}>
                             <button
                                 onClick={handleSave}
-                                disabled={isSaving || (editId === product.id && editName === product.name)}
+                                disabled={isSaving || (editId === product.id && editName === product.name && editCategory === product.category)}
                                 style={{
                                     padding: '4px 12px',
-                                    background: (editId !== product.id || editName !== product.name) ? '#0058a3' : '#ccc',
+                                    background: (editId !== product.id || editName !== product.name || editCategory !== product.category) ? '#0058a3' : '#ccc',
                                     color: 'white',
                                     border: 'none',
                                     borderRadius: '4px',
-                                    cursor: (editId !== product.id || editName !== product.name) && !isSaving ? 'pointer' : 'default'
+                                    cursor: (editId !== product.id || editName !== product.name || editCategory !== product.category) && !isSaving ? 'pointer' : 'default'
                                 }}
                             >
                                 {isSaving ? 'Sauvegarde...' : '✓ Fix'}
                             </button>
-                            <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
-                                {product.tags && product.tags.map((tag, i) => (
-                                    <span key={i} style={{ fontSize: '11px', background: '#eee', padding: '2px 6px', borderRadius: '4px' }}>
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,13 +181,7 @@ export default function ProductCard({ product: initialProduct, priority = false 
                         <div>
                             <span style={{ fontSize: '14px', fontWeight: 600, color: '#666' }}>{product.id}</span>
                             <h2 style={{ fontSize: '24px', fontWeight: 700, margin: '8px 0' }}>{product.name}</h2>
-                            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
-                                {product.tags && product.tags.map((tag, i) => (
-                                    <span key={i} style={{ fontSize: '12px', background: '#eee', padding: '4px 8px', borderRadius: '4px' }}>
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
+                            <p style={{ fontSize: '14px', color: '#666', marginBottom: '16px' }}>Catégorie : {product.category}</p>
                         </div>
                         <button
                             onClick={handleWhatsApp}
