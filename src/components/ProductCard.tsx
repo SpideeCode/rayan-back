@@ -11,9 +11,13 @@ export type Product = {
     tags: string[];
 };
 
-export default function ProductCard({ product, priority = false }: { product: Product, priority?: boolean }) {
+export default function ProductCard({ product: initialProduct, priority = false }: { product: Product, priority?: boolean }) {
+    const [product, setProduct] = useState(initialProduct);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [imageLoaded, setImageLoaded] = useState(false);
+    const [editId, setEditId] = useState(product.id);
+    const [editName, setEditName] = useState(product.name);
+    const [isSaving, setIsSaving] = useState(false);
 
     const handleWhatsApp = () => {
         // We assume the phone number is +33 6 XX XX XX XX or similar, here is a placeholder
@@ -23,18 +27,49 @@ export default function ProductCard({ product, priority = false }: { product: Pr
         window.open(whatsappUrl, '_blank');
     };
 
+    const handleSave = async (e: React.MouseEvent) => {
+        e.stopPropagation();
+        if (!editId || !editName) return;
+
+        setIsSaving(true);
+        try {
+            const res = await fetch('/api/update-product', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    originalId: product.id,
+                    newId: editId,
+                    newName: editName
+                })
+            });
+
+            if (res.ok) {
+                const data = await res.json();
+                setProduct(data.product);
+            } else {
+                alert('Erreur lors de la sauvegarde');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Erreur réseau');
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
     return (
         <>
             <div
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => { setIsModalOpen(true); }}
                 style={{
                     background: 'var(--card-bg)',
                     border: '1px solid var(--border)',
-                    cursor: 'pointer',
+                    cursor: 'default',
                     display: 'flex',
                     flexDirection: 'column',
                     transition: 'transform 0.2s ease, box-shadow 0.2s ease',
                     overflow: 'hidden',
+                    position: 'relative',
                 }}
                 onMouseEnter={e => {
                     e.currentTarget.style.transform = 'translateY(-4px)';
@@ -46,6 +81,7 @@ export default function ProductCard({ product, priority = false }: { product: Pr
                 }}
             >
                 <div style={{ position: 'relative', width: '100%', paddingBottom: '100%', backgroundColor: '#f6f7f8' }}>
+
                     {!imageLoaded && <div className="skeleton" style={{ position: 'absolute', inset: 0 }} />}
                     <Image
                         src={product.image}
@@ -59,16 +95,42 @@ export default function ProductCard({ product, priority = false }: { product: Pr
                 </div>
 
                 <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 600, color: '#666' }}>{product.id}</span>
-                    <h3 style={{ fontSize: '16px', fontWeight: 600, color: 'var(--foreground)', lineHeight: 1.3 }}>
-                        {product.name}
-                    </h3>
-                    <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', marginTop: '8px' }}>
-                        {product.tags && product.tags.map((tag, i) => (
-                            <span key={i} style={{ fontSize: '11px', background: '#eee', padding: '2px 6px', borderRadius: '4px' }}>
-                                {tag}
-                            </span>
-                        ))}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                        <input
+                            value={editId}
+                            onChange={e => setEditId(e.target.value)}
+                            onClick={e => e.stopPropagation()}
+                            style={{ padding: '4px', fontSize: '12px', border: '1px solid #ccc' }}
+                        />
+                        <textarea
+                            value={editName}
+                            onChange={e => setEditName(e.target.value)}
+                            onClick={e => e.stopPropagation()}
+                            style={{ padding: '4px', fontSize: '14px', border: '1px solid #ccc', resize: 'vertical' }}
+                        />
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '4px' }}>
+                            <button
+                                onClick={handleSave}
+                                disabled={isSaving || (editId === product.id && editName === product.name)}
+                                style={{
+                                    padding: '4px 12px',
+                                    background: (editId !== product.id || editName !== product.name) ? '#0058a3' : '#ccc',
+                                    color: 'white',
+                                    border: 'none',
+                                    borderRadius: '4px',
+                                    cursor: (editId !== product.id || editName !== product.name) && !isSaving ? 'pointer' : 'default'
+                                }}
+                            >
+                                {isSaving ? 'Sauvegarde...' : '✓ Fix'}
+                            </button>
+                            <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                                {product.tags && product.tags.map((tag, i) => (
+                                    <span key={i} style={{ fontSize: '11px', background: '#eee', padding: '2px 6px', borderRadius: '4px' }}>
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

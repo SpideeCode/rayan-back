@@ -1,159 +1,159 @@
 [
   {
-    "id": "00-2003",
+    "id": "00-3003",
     "name": "Gobelet plastique",
     "category": "Gobelets",
-    "image": "/items/00-2003.png",
+    "image": "/items/00-3003.png",
     "tags": []
   },
   {
-    "id": "00-2009",
+    "id": "00-3009",
     "name": "Gobelet plastique",
     "category": "Gobelets",
-    "image": "/items/00-2009.png",
+    "image": "/items/00-3009.png",
     "tags": []
   },
   {
-    "id": "00-2011",
+    "id": "00-3011",
     "name": "Couvercle Gobelet plastique",
     "category": "Gobelets",
-    "image": "/items/00-2011.png",
+    "image": "/items/00-3011.png",
     "tags": []
   },
   {
-    "id": "00-2019",
+    "id": "00-3019",
     "name": "Gobelet Kraft Blanc",
     "category": "Gobelets",
-    "image": "/items/00-2019.png",
+    "image": "/items/00-3019.png",
     "tags": []
   },
   {
-    "id": "00-2047",
-    "name": "Boîtes 3 pizza SC",
+    "id": "00-2947",
+    "name": "Boîtes pizza SC",
     "category": "Boîtes",
-    "image": "/items/00-2047.png",
+    "image": "/items/00-2947.png",
     "tags": []
   },
   {
-    "id": "00-2048",
+    "id": "00-2849",
     "name": "Barquette aluminium ronde",
     "category": "Boîtes",
-    "image": "/items/00-2048.png",
+    "image": "/items/00-2849.png",
     "tags": [
       "ALUMINIUM",
       "203MM"
     ]
   },
   {
-    "id": "00-2055",
-    "name": "Boîtes à pzza SC",
+    "id": "00-2955",
+    "name": "Boîtes à pizza SC",
     "category": "Boîtes",
-    "image": "/items/00-2055.png",
+    "image": "/items/00-2955.png",
     "tags": []
   },
   {
-    "id": "00-2059",
+    "id": "00-3059",
     "name": "Pailles",
     "category": "Autres",
-    "image": "/items/00-2059.png",
+    "image": "/items/00-3059.png",
     "tags": [
       "210MM",
       "CARTON"
     ]
   },
   {
-    "id": "00-2082",
+    "id": "00-2882",
     "name": "PAPIER CASSE",
     "category": "Autres",
-    "image": "/items/00-2082.png",
+    "image": "/items/00-2882.png",
     "tags": [
       "PAPIER"
     ]
   },
   {
-    "id": "00-2089",
+    "id": "00-3089",
     "name": "Rouleaux papier",
     "category": "Autres",
-    "image": "/items/00-2089.png",
+    "image": "/items/00-3089.png",
     "tags": [
       "PAPIER",
       "24,7CM"
     ]
   },
   {
-    "id": "00-2090",
+    "id": "00-3090",
     "name": "Papier toilette",
     "category": "Autres",
-    "image": "/items/00-2090.png",
+    "image": "/items/00-3090.png",
     "tags": [
       "PAPIER"
     ]
   },
   {
-    "id": "00-2098",
+    "id": "00-3098",
     "name": "Rouleaux papier",
     "category": "Autres",
-    "image": "/items/00-2098.png",
+    "image": "/items/00-3098.png",
     "tags": [
       "PAPIER"
     ]
   },
   {
-    "id": "00-2103",
+    "id": "00-3103",
     "name": "Papier toilette",
     "category": "Autres",
-    "image": "/items/00-2103.png",
+    "image": "/items/00-3103.png",
     "tags": []
   },
   {
-    "id": "00-2165",
+    "id": "00-3165",
     "name": "Sachets plastiques",
     "category": "Sachets",
-    "image": "/items/00-2165.png",
+    "image": "/items/00-3165.png",
     "tags": []
   },
   {
-    "id": "00-2178",
+    "id": "00-3178",
     "name": "Gants d'hygiène jetables",
     "category": "Autres",
-    "image": "/items/00-2178.png",
+    "image": "/items/00-3178.png",
     "tags": []
   },
   {
-    "id": "00-2204",
+    "id": "00-3204",
     "name": "Glow - Degraissant cuisine",
     "category": "Autres",
-    "image": "/items/00-2204.png",
+    "image": "/items/00-3204.png",
     "tags": []
   },
   {
-    "id": "00-2208",
+    "id": "00-3208",
     "name": "Barquette 00-2208",
     "category": "Boîtes",
-    "image": "/items/00-2208.png",
+    "image": "/items/00-3208.png",
     "tags": []
   },
   {
-    "id": "00-2352",
-    "name": "Boîtes à przz3 SC",
+    "id": "00-2952",
+    "name": "Boîtes à pizza SC",
     "category": "Boîtes",
-    "image": "/items/00-2352.png",
+    "image": "/items/00-2952.png",
     "tags": []
   },
   {
-    "id": "00-2362",
+    "id": "00-2962",
     "name": "Papier boucherie",
     "category": "Autres",
-    "image": "/items/00-2362.png",
+    "image": "/items/00-2962.png",
     "tags": [
       "PAPIER"
     ]
   },
   {
-    "id": "00-2392",
-    "name": "Bol à soupe KraftiPE",
+    "id": "00-2992",
+    "name": "Bol à soupe kraft",
     "category": "Bols",
-    "image": "/items/00-2392.png",
+    "image": "/items/00-2992.png",
     "tags": [
       "115MM"
     ]
@@ -180,15 +180,15 @@
     "tags": []
   },
   {
-    "id": "00-2509",
+    "id": "00-2909",
     "name": "Sachets à pistolets",
     "category": "Sachets",
-    "image": "/items/00-2509.png",
+    "image": "/items/00-2909.png",
     "tags": []
   },
   {
     "id": "00-2510",
-    "name": "Boite nouilles (toid-top)",
+    "name": "Boite nouilles (fold-top)",
     "category": "Autres",
     "image": "/items/00-2510.png",
     "tags": [
@@ -197,7 +197,7 @@
   },
   {
     "id": "00-2511",
-    "name": "Boîte nouilles (foid-top}",
+    "name": "Boîte nouilles (fold-top}",
     "category": "Boîtes",
     "image": "/items/00-2511.png",
     "tags": [
@@ -383,7 +383,7 @@
   },
   {
     "id": "00-2560",
-    "name": "PS Barquette À I6N Blanc",
+    "name": "PS Barquette AI6N Blanc",
     "category": "Boîtes",
     "image": "/items/00-2560.png",
     "tags": [
@@ -410,7 +410,7 @@
   },
   {
     "id": "00-2564",
-    "name": "PS Borquette A20/A14+1 Blanc",
+    "name": "PS Barquette A20/A14+1 Blanc",
     "category": "Autres",
     "image": "/items/00-2564.png",
     "tags": [
@@ -457,7 +457,7 @@
   },
   {
     "id": "00-2573",
-    "name": "KRAFT Barquetie A9",
+    "name": "KRAFT Barquette A9",
     "category": "Autres",
     "image": "/items/00-2573.png",
     "tags": []
@@ -471,7 +471,7 @@
   },
   {
     "id": "00-2575",
-    "name": "KRAFT Sarquette A14",
+    "name": "KRAFT Barquette A14",
     "category": "Autres",
     "image": "/items/00-2575.png",
     "tags": []
@@ -492,7 +492,7 @@
   },
   {
     "id": "00-2579",
-    "name": "Barquette à ttes Bianc",
+    "name": "Barquette à frites Blanc",
     "category": "Boîtes",
     "image": "/items/00-2579.png",
     "tags": []
@@ -508,7 +508,7 @@
   },
   {
     "id": "00-2581",
-    "name": "Rovies en carton",
+    "name": "Ravier en carton",
     "category": "Autres",
     "image": "/items/00-2581.png",
     "tags": [
@@ -657,7 +657,7 @@
   },
   {
     "id": "00-2602",
-    "name": "Airpack.",
+    "name": "Airpack",
     "category": "Autres",
     "image": "/items/00-2602.png",
     "tags": []
@@ -723,14 +723,14 @@
   },
   {
     "id": "00-2611",
-    "name": "Couvercie EuroBoxx",
+    "name": "Couvercle EuroBoxx",
     "category": "Boîtes",
     "image": "/items/00-2611.png",
     "tags": []
   },
   {
     "id": "00-2612",
-    "name": "Ssladboxx rectangulaire",
+    "name": "Saladboxx rectangulaire",
     "category": "Boîtes",
     "image": "/items/00-2612.png",
     "tags": [
@@ -794,16 +794,16 @@
   },
   {
     "id": "00-2619",
-    "name": "Ouvercle Saladboxx rectangulair",
+    "name": "Couvercle Saladboxx rectangulaire",
     "category": "Boîtes",
     "image": "/items/00-2619.png",
     "tags": []
   },
   {
-    "id": "00-2624",
+    "id": "00-2524",
     "name": "Boîte à hamburger",
     "category": "Boîtes",
-    "image": "/items/00-2624.png",
+    "image": "/items/00-2524.png",
     "tags": []
   },
   {
@@ -868,10 +868,10 @@
     "tags": []
   },
   {
-    "id": "00-2638",
+    "id": "00-2698",
     "name": "Barquette micro-ondes",
     "category": "Boîtes",
-    "image": "/items/00-2638.png",
+    "image": "/items/00-2698.png",
     "tags": []
   },
   {
@@ -923,7 +923,7 @@
   },
   {
     "id": "00-2646",
-    "name": "Plateau susht 03",
+    "name": "Plateau sushi 03",
     "category": "Assiettes",
     "image": "/items/00-2646.png",
     "tags": [
@@ -950,7 +950,7 @@
   },
   {
     "id": "00-2649",
-    "name": "Plateau susin 09",
+    "name": "Plateau sushi 09",
     "category": "Assiettes",
     "image": "/items/00-2649.png",
     "tags": [
@@ -1002,14 +1002,14 @@
   },
   {
     "id": "00-2655",
-    "name": "Boulangerie - Barquerte",
+    "name": "Boulangerie - Barquette",
     "category": "Autres",
     "image": "/items/00-2655.png",
     "tags": []
   },
   {
     "id": "00-2656",
-    "name": "Barquette saiade Dramond",
+    "name": "Barquette salade Dramond",
     "category": "Boîtes",
     "image": "/items/00-2656.png",
     "tags": [
@@ -1017,17 +1017,17 @@
     ]
   },
   {
-    "id": "00-2657",
+    "id": "00-2697",
     "name": "Barquette micro-ondes",
     "category": "Boîtes",
-    "image": "/items/00-2657.png",
+    "image": "/items/00-2697.png",
     "tags": []
   },
   {
-    "id": "00-2658",
+    "id": "00-2588",
     "name": "Assiettes en carton",
     "category": "Assiettes",
-    "image": "/items/00-2658.png",
+    "image": "/items/00-2588.png",
     "tags": [
       "CARTON",
       "23CM"
@@ -1043,10 +1043,10 @@
     ]
   },
   {
-    "id": "00-2663",
+    "id": "00-2563",
     "name": "PS Barquette A16D Blanc",
     "category": "Boîtes",
-    "image": "/items/00-2663.png",
+    "image": "/items/00-2563.png",
     "tags": [
       "PS"
     ]
@@ -1089,7 +1089,7 @@
   },
   {
     "id": "00-2669",
-    "name": "Borquette salade OVALE",
+    "name": "Barquette salade OVALE",
     "category": "Autres",
     "image": "/items/00-2669.png",
     "tags": [
@@ -1098,7 +1098,7 @@
   },
   {
     "id": "00-2670",
-    "name": "Barquette ssiade OVALE",
+    "name": "Barquette salade OVALE",
     "category": "Boîtes",
     "image": "/items/00-2670.png",
     "tags": [
@@ -1106,17 +1106,17 @@
     ]
   },
   {
-    "id": "00-2672",
+    "id": "00-2572",
     "name": "KRAFT Barquette A7",
     "category": "Boîtes",
-    "image": "/items/00-2672.png",
+    "image": "/items/00-2572.png",
     "tags": []
   },
   {
-    "id": "00-2676",
-    "name": "KRAFT Barquetie A16N",
+    "id": "00-2576",
+    "name": "KRAFT Barquette A16N",
     "category": "Autres",
-    "image": "/items/00-2676.png",
+    "image": "/items/00-2576.png",
     "tags": []
   },
   {
@@ -1211,7 +1211,7 @@
   },
   {
     "id": "00-2691",
-    "name": "Zouvercte pour coupe dessert",
+    "name": "Couvercle pour coupe dessert",
     "category": "Gobelets",
     "image": "/items/00-2691.png",
     "tags": [
@@ -1219,10 +1219,10 @@
     ]
   },
   {
-    "id": "00-2695",
+    "id": "00-2699",
     "name": "Barquette micro-ondes",
     "category": "Boîtes",
-    "image": "/items/00-2695.png",
+    "image": "/items/00-2699.png",
     "tags": []
   },
   {
@@ -1241,14 +1241,14 @@
   },
   {
     "id": "00-2701",
-    "name": "Barquents micro-ondes",
+    "name": "Barquette micro-ondes",
     "category": "Autres",
     "image": "/items/00-2701.png",
     "tags": []
   },
   {
     "id": "00-2702",
-    "name": "Barquerte micro-ondes",
+    "name": "Barquette micro-ondes",
     "category": "Autres",
     "image": "/items/00-2702.png",
     "tags": []
@@ -1262,7 +1262,7 @@
   },
   {
     "id": "00-2705",
-    "name": "Borquette micro-ondes",
+    "name": "Barquette micro-ondes",
     "category": "Autres",
     "image": "/items/00-2705.png",
     "tags": []
@@ -1297,49 +1297,49 @@
   },
   {
     "id": "00-2710",
-    "name": "Zouvercle barquette micro-onde",
+    "name": "Couvercle barquette micro-onde",
     "category": "Boîtes",
     "image": "/items/00-2710.png",
     "tags": []
   },
   {
     "id": "00-2711",
-    "name": "Bolisoupe micro-ondes",
+    "name": "Bol à soupe micro-ondes",
     "category": "Bols",
     "image": "/items/00-2711.png",
     "tags": []
   },
   {
     "id": "00-2712",
-    "name": "Bolisoupe micro-ondes",
+    "name": "Bol à soupe micro-ondes",
     "category": "Bols",
     "image": "/items/00-2712.png",
     "tags": []
   },
   {
     "id": "00-2713",
-    "name": "Bolisoupe micro-ondes",
+    "name": "Bol à soupe micro-ondes",
     "category": "Bols",
     "image": "/items/00-2713.png",
     "tags": []
   },
   {
     "id": "00-2714",
-    "name": "Bolisoupe micro-ondes",
+    "name": "Bol à soupe micro-ondes",
     "category": "Bols",
     "image": "/items/00-2714.png",
     "tags": []
   },
   {
     "id": "00-2715",
-    "name": "Bolisoupe Kraft",
+    "name": "Bol à soupe Kraft",
     "category": "Bols",
     "image": "/items/00-2715.png",
     "tags": []
   },
   {
     "id": "00-2716",
-    "name": "Plateau trarteur octogonat",
+    "name": "Plateau traiteur octogonal",
     "category": "Assiettes",
     "image": "/items/00-2716.png",
     "tags": [
@@ -1349,7 +1349,7 @@
   },
   {
     "id": "00-2717",
-    "name": "Ploteou traiteur octogonal",
+    "name": "Plateau traiteur octogonal",
     "category": "Autres",
     "image": "/items/00-2717.png",
     "tags": [
@@ -1369,7 +1369,7 @@
   },
   {
     "id": "00-2719",
-    "name": "Plateau traiteur octogonat",
+    "name": "Plateau traiteur octogonal",
     "category": "Assiettes",
     "image": "/items/00-2719.png",
     "tags": [
@@ -1379,7 +1379,7 @@
   },
   {
     "id": "00-2720",
-    "name": "Plateau traiteur sctogonal",
+    "name": "Plateau traiteur octogonal",
     "category": "Assiettes",
     "image": "/items/00-2720.png",
     "tags": [
@@ -1389,7 +1389,7 @@
   },
   {
     "id": "00-2721",
-    "name": "Plateau traiteur octoganal",
+    "name": "Plateau traiteur octogonal",
     "category": "Assiettes",
     "image": "/items/00-2721.png",
     "tags": [
@@ -1409,7 +1409,7 @@
   },
   {
     "id": "00-2723",
-    "name": "Plateau traiteur octogonai",
+    "name": "Plateau traiteur octogonal",
     "category": "Assiettes",
     "image": "/items/00-2723.png",
     "tags": [
@@ -1427,7 +1427,7 @@
   },
   {
     "id": "00-2725",
-    "name": "Saladter 150 mm",
+    "name": "Saladier 150 mm",
     "category": "Autres",
     "image": "/items/00-2725.png",
     "tags": [
@@ -1436,7 +1436,7 @@
   },
   {
     "id": "00-2726",
-    "name": "Salagier 150 mm",
+    "name": "Saladier 150 mm",
     "category": "Autres",
     "image": "/items/00-2726.png",
     "tags": [
@@ -1454,10 +1454,10 @@
     ]
   },
   {
-    "id": "00-2728",
+    "id": "00-2725",
     "name": "Saladier 185 mm",
     "category": "Bols",
-    "image": "/items/00-2728.png",
+    "image": "/items/00-2725.png",
     "tags": [
       "185MM"
     ]
@@ -1491,7 +1491,7 @@
   },
   {
     "id": "00-2734",
-    "name": "Saladter carton kraît carré",
+    "name": "Saladier carton kraft carré",
     "category": "Autres",
     "image": "/items/00-2734.png",
     "tags": [
@@ -1610,7 +1610,7 @@
   },
   {
     "id": "00-2747",
-    "name": "Cutllere PS",
+    "name": "Cuillère PS",
     "category": "Autres",
     "image": "/items/00-2747.png",
     "tags": [
@@ -1628,7 +1628,7 @@
   },
   {
     "id": "00-2749",
-    "name": "Cuillere a cate PS",
+    "name": "Cuillère a cate PS",
     "category": "Autres",
     "image": "/items/00-2749.png",
     "tags": [
@@ -1646,7 +1646,7 @@
   },
   {
     "id": "00-2751",
-    "name": "Couteau en bors",
+    "name": "Couteau en bois",
     "category": "Couverts",
     "image": "/items/00-2751.png",
     "tags": [
@@ -1673,7 +1673,7 @@
   },
   {
     "id": "00-2754",
-    "name": "Cuillere à glace en bois",
+    "name": "Cuillère à glace en bois",
     "category": "Autres",
     "image": "/items/00-2754.png",
     "tags": [
@@ -1726,7 +1726,7 @@
   },
   {
     "id": "00-2762",
-    "name": "Laguettes Jetables - Modèle Glar",
+    "name": "Baguettes Jetables - Modèle Glar",
     "category": "Autres",
     "image": "/items/00-2762.png",
     "tags": []
@@ -1763,7 +1763,7 @@
   },
   {
     "id": "00-2767",
-    "name": "Uillères en Plastique - Couleur",
+    "name": "Cuillère en Plastique - Couleur",
     "category": "Autres",
     "image": "/items/00-2767.png",
     "tags": []
@@ -1784,28 +1784,28 @@
   },
   {
     "id": "00-2771",
-    "name": "Lingettes eron",
+    "name": "Lingettes citron",
     "category": "Autres",
     "image": "/items/00-2771.png",
     "tags": []
   },
   {
     "id": "00-2772",
-    "name": "Serviettes de tabie",
+    "name": "Serviettes de table",
     "category": "Serviettes",
     "image": "/items/00-2772.png",
     "tags": []
   },
   {
     "id": "00-2773",
-    "name": "Serviettes de _",
+    "name": "Serviettes de table",
     "category": "Serviettes",
     "image": "/items/00-2773.png",
     "tags": []
   },
   {
     "id": "00-2774",
-    "name": "Serviettes de __",
+    "name": "Serviettes de table",
     "category": "Serviettes",
     "image": "/items/00-2774.png",
     "tags": []
@@ -1819,7 +1819,7 @@
   },
   {
     "id": "00-2776",
-    "name": "Servientes de table",
+    "name": "Serviettes de table",
     "category": "Autres",
     "image": "/items/00-2776.png",
     "tags": []
@@ -1938,7 +1938,7 @@
   },
   {
     "id": "00-2796",
-    "name": "Barquette aluminium roule",
+    "name": "Barquette aluminium roulé",
     "category": "Boîtes",
     "image": "/items/00-2796.png",
     "tags": [
@@ -1956,7 +1956,7 @@
   },
   {
     "id": "00-2798",
-    "name": "Barquette aluminium roule",
+    "name": "Barquette aluminium roulé",
     "category": "Boîtes",
     "image": "/items/00-2798.png",
     "tags": [
@@ -1974,14 +1974,14 @@
   },
   {
     "id": "00-2801",
-    "name": "Couvercle barquette aluminiuir",
+    "name": "Couvercle barquette aluminium",
     "category": "Boîtes",
     "image": "/items/00-2801.png",
     "tags": []
   },
   {
     "id": "00-2802",
-    "name": "Barquette aluminium roule",
+    "name": "Barquette aluminium roulé",
     "category": "Boîtes",
     "image": "/items/00-2802.png",
     "tags": [
@@ -2044,7 +2044,7 @@
   },
   {
     "id": "00-2809",
-    "name": "Couvercle barquatte alunintum",
+    "name": "Couvercle Barquette aluminium",
     "category": "Autres",
     "image": "/items/00-2809.png",
     "tags": [
@@ -2053,7 +2053,7 @@
   },
   {
     "id": "00-2810",
-    "name": "Barquette oluminium roulé",
+    "name": "Barquette aluminium roulé",
     "category": "Boîtes",
     "image": "/items/00-2810.png",
     "tags": [
@@ -2062,7 +2062,7 @@
   },
   {
     "id": "00-2811",
-    "name": "Couvercie barquette aluminiur",
+    "name": "Couvercle barquette aluminium",
     "category": "Boîtes",
     "image": "/items/00-2811.png",
     "tags": [
@@ -2081,7 +2081,7 @@
   },
   {
     "id": "00-2813",
-    "name": "Couvercle barquette slumineur",
+    "name": "Couvercle barquette aluminium",
     "category": "Boîtes",
     "image": "/items/00-2813.png",
     "tags": [
@@ -2099,7 +2099,7 @@
   },
   {
     "id": "00-2815",
-    "name": "Couvercie borquette olumineur",
+    "name": "Couvercle Barquette aluminium",
     "category": "Autres",
     "image": "/items/00-2815.png",
     "tags": [
@@ -2124,7 +2124,7 @@
   },
   {
     "id": "00-2818",
-    "name": "Batquette sluminium releve",
+    "name": "Barquette aluminium relevé",
     "category": "Autres",
     "image": "/items/00-2818.png",
     "tags": [
@@ -2140,7 +2140,7 @@
   },
   {
     "id": "00-2820",
-    "name": "Sarquette aluminium relevé",
+    "name": "Barquette aluminium relevé",
     "category": "Autres",
     "image": "/items/00-2820.png",
     "tags": [
@@ -2149,7 +2149,7 @@
   },
   {
     "id": "00-2822",
-    "name": "Barquette sluminium relevé",
+    "name": "Barquette aluminium relevé",
     "category": "Boîtes",
     "image": "/items/00-2822.png",
     "tags": [
@@ -2158,7 +2158,7 @@
   },
   {
     "id": "00-2823",
-    "name": "Couvercie barquette ajumuniur",
+    "name": "Couvercle barquette aluminium",
     "category": "Boîtes",
     "image": "/items/00-2823.png",
     "tags": [
@@ -2167,7 +2167,7 @@
   },
   {
     "id": "00-2824",
-    "name": "Barquette alumimum relevé",
+    "name": "Barquette aluminium relevé",
     "category": "Boîtes",
     "image": "/items/00-2824.png",
     "tags": [
@@ -2194,7 +2194,7 @@
   },
   {
     "id": "00-2827",
-    "name": "Zouvercle barquette al",
+    "name": "Couvercle barquette aluminium",
     "category": "Boîtes",
     "image": "/items/00-2827.png",
     "tags": []
@@ -2228,7 +2228,7 @@
   },
   {
     "id": "00-2831",
-    "name": "Zouvercle barquette a",
+    "name": "Couvercle barquette a",
     "category": "Boîtes",
     "image": "/items/00-2831.png",
     "tags": []
@@ -2307,7 +2307,7 @@
   },
   {
     "id": "00-2841",
-    "name": "Zouvercle barquette aluminiur",
+    "name": "Couvercle barquette aluminium",
     "category": "Boîtes",
     "image": "/items/00-2841.png",
     "tags": [
@@ -2325,7 +2325,7 @@
   },
   {
     "id": "00-2843",
-    "name": "Borquette sluminium roulé",
+    "name": "Barquette aluminium roulé",
     "category": "Autres",
     "image": "/items/00-2843.png",
     "tags": [
@@ -2334,7 +2334,7 @@
   },
   {
     "id": "00-2844",
-    "name": "Barquette aluminium roule",
+    "name": "Barquette aluminium roulé",
     "category": "Boîtes",
     "image": "/items/00-2844.png",
     "tags": [
@@ -2403,7 +2403,7 @@
   },
   {
     "id": "00-2852",
-    "name": "Plot sluminium",
+    "name": "Plat aluminium",
     "category": "Autres",
     "image": "/items/00-2852.png",
     "tags": [
@@ -2423,7 +2423,7 @@
   },
   {
     "id": "00-2854",
-    "name": "Aluminium plateau rectangulair",
+    "name": "Aluminium plateau rectangulaire",
     "category": "Assiettes",
     "image": "/items/00-2854.png",
     "tags": [
@@ -2443,7 +2443,7 @@
   },
   {
     "id": "00-2859",
-    "name": "Fit alurminium",
+    "name": "Film aluminium",
     "category": "Autres",
     "image": "/items/00-2859.png",
     "tags": [
@@ -2453,7 +2453,7 @@
   },
   {
     "id": "00-2860",
-    "name": "Film aiuminium",
+    "name": "Film aluminium",
     "category": "Autres",
     "image": "/items/00-2860.png",
     "tags": [
@@ -2473,7 +2473,7 @@
   },
   {
     "id": "00-2862",
-    "name": "Film stominium",
+    "name": "Film aluminium",
     "category": "Autres",
     "image": "/items/00-2862.png",
     "tags": [
@@ -2493,7 +2493,7 @@
   },
   {
     "id": "00-2864",
-    "name": "Film stomimum",
+    "name": "Film aluminium",
     "category": "Autres",
     "image": "/items/00-2864.png",
     "tags": [
@@ -2503,7 +2503,7 @@
   },
   {
     "id": "00-2865",
-    "name": "Film alumantun",
+    "name": "Film aluminium",
     "category": "Autres",
     "image": "/items/00-2865.png",
     "tags": [
@@ -2523,7 +2523,7 @@
   },
   {
     "id": "00-2867",
-    "name": "Fièm alumomum",
+    "name": "Film aluminium",
     "category": "Autres",
     "image": "/items/00-2867.png",
     "tags": [
@@ -2543,7 +2543,7 @@
   },
   {
     "id": "00-2869",
-    "name": "Papier de cuisson 40 gim°",
+    "name": "Papier de cuisson 40",
     "category": "Autres",
     "image": "/items/00-2869.png",
     "tags": [
@@ -2552,7 +2552,7 @@
   },
   {
     "id": "00-2870",
-    "name": "Papier de cuisson 40 gim°",
+    "name": "Papier de cuisson 40",
     "category": "Autres",
     "image": "/items/00-2870.png",
     "tags": [
@@ -2614,27 +2614,27 @@
     ]
   },
   {
-    "id": "00-2884",
-    "name": "Bois à soupe KratüPE",
+    "id": "00-2894",
+    "name": "Bois à soupe Kraft/PE",
     "category": "Autres",
-    "image": "/items/00-2884.png",
+    "image": "/items/00-2894.png",
     "tags": [
       "1000ML",
       "115MM"
     ]
   },
   {
-    "id": "00-2886",
+    "id": "00-2885",
     "name": "PAPIER CASSE",
     "category": "Autres",
-    "image": "/items/00-2886.png",
+    "image": "/items/00-2885.png",
     "tags": [
       "PAPIER"
     ]
   },
   {
     "id": "00-2888",
-    "name": "FAPIER CASSE",
+    "name": "PAPIER CASSE",
     "category": "Autres",
     "image": "/items/00-2888.png",
     "tags": [
@@ -2659,10 +2659,10 @@
     ]
   },
   {
-    "id": "00-2898",
+    "id": "FW00-2892.6",
     "name": "Sac en papier Kraft",
     "category": "Sachets",
-    "image": "/items/00-2898.png",
+    "image": "/items/FW00-2892.6.png",
     "tags": [
       "PAPIER"
     ]
@@ -2697,21 +2697,21 @@
   },
   {
     "id": "00-2904",
-    "name": "PERDRE SE à ARTE SE",
+    "name": "Sachets à pistolets",
     "category": "Autres",
     "image": "/items/00-2904.png",
     "tags": []
   },
   {
     "id": "00-2905",
-    "name": "DSTI ER à PaNRTR SE",
+    "name": "Sachets à pistolets",
     "category": "Autres",
     "image": "/items/00-2905.png",
     "tags": []
   },
   {
     "id": "00-2906",
-    "name": "SAR 1e PARRR SE",
+    "name": "Sachets à pistolets",
     "category": "Autres",
     "image": "/items/00-2906.png",
     "tags": []
@@ -2773,17 +2773,17 @@
     "tags": []
   },
   {
-    "id": "00-2921",
-    "name": "Couvercle barquette alumyniur",
+    "id": "00-2821",
+    "name": "Couvercle barquette aluminium",
     "category": "Boîtes",
-    "image": "/items/00-2921.png",
+    "image": "/items/00-2821.png",
     "tags": [
       "ALUMINIUM"
     ]
   },
   {
     "id": "00-2925",
-    "name": "Carion plant",
+    "name": "Carton pliant",
     "category": "Autres",
     "image": "/items/00-2925.png",
     "tags": [
@@ -2950,7 +2950,7 @@
   },
   {
     "id": "00-2968",
-    "name": "Papier boucherte",
+    "name": "Papier boucherie",
     "category": "Autres",
     "image": "/items/00-2968.png",
     "tags": [
@@ -2968,28 +2968,28 @@
   },
   {
     "id": "00-2971",
-    "name": "Papier wrap 40 gim°",
+    "name": "Papier wrap 40",
     "category": "Autres",
     "image": "/items/00-2971.png",
     "tags": []
   },
   {
     "id": "00-2972",
-    "name": "Papier wrap 40 gim*",
+    "name": "Papier wrap 40",
     "category": "Autres",
     "image": "/items/00-2972.png",
     "tags": []
   },
   {
     "id": "00-2973",
-    "name": "Papier rap 40 gim°",
+    "name": "Papier wrap 40",
     "category": "Autres",
     "image": "/items/00-2973.png",
     "tags": []
   },
   {
     "id": "00-2974",
-    "name": "Papier wrap 40 gim*",
+    "name": "Papier wrap 40",
     "category": "Autres",
     "image": "/items/00-2974.png",
     "tags": []
@@ -3024,7 +3024,7 @@
   },
   {
     "id": "00-2981",
-    "name": "Bol à soupe KrattiPE",
+    "name": "Bols à soupe Kraft",
     "category": "Bols",
     "image": "/items/00-2981.png",
     "tags": [
@@ -3033,35 +3033,35 @@
   },
   {
     "id": "00-2983",
-    "name": "Bois à soupe Kratt",
+    "name": "Bols à soupe Kraft",
     "category": "Autres",
     "image": "/items/00-2983.png",
     "tags": []
   },
   {
     "id": "00-2984",
-    "name": "Couvercie Bol à soupe Kraft",
+    "name": "Couvercle Bols à soupe Kraft",
     "category": "Bols",
     "image": "/items/00-2984.png",
     "tags": []
   },
   {
     "id": "00-2985",
-    "name": "Couvercle Bois 3 soupe Kraft",
+    "name": "Couvercle Bols à soupe Kraft",
     "category": "Autres",
     "image": "/items/00-2985.png",
     "tags": []
   },
   {
     "id": "00-2986",
-    "name": "Couvercle Bois à soupe Kraft",
+    "name": "Couvercle Bols à soupe Kraft",
     "category": "Autres",
     "image": "/items/00-2986.png",
     "tags": []
   },
   {
     "id": "00-2987",
-    "name": "Couvercle Bois à soupe PP",
+    "name": "Couvercle Bols à soupe PP",
     "category": "Autres",
     "image": "/items/00-2987.png",
     "tags": [
@@ -3070,7 +3070,7 @@
   },
   {
     "id": "00-2988",
-    "name": "Couvercle Bol a soupe PP",
+    "name": "Couvercle Bols à soupe PP",
     "category": "Bols",
     "image": "/items/00-2988.png",
     "tags": [
@@ -3079,7 +3079,7 @@
   },
   {
     "id": "00-2989",
-    "name": "Couvercle Bol a soupe PP",
+    "name": "Couvercle Bols à soupe PP",
     "category": "Bols",
     "image": "/items/00-2989.png",
     "tags": [
@@ -3123,7 +3123,7 @@
   },
   {
     "id": "00-3002",
-    "name": "Gobelet pisstique",
+    "name": "Gobelet plastique",
     "category": "Gobelets",
     "image": "/items/00-3002.png",
     "tags": [
@@ -3258,7 +3258,7 @@
   },
   {
     "id": "00-3023",
-    "name": "Gobelet à coté KRAFTIPE",
+    "name": "Gobelet à coté kraft",
     "category": "Gobelets",
     "image": "/items/00-3023.png",
     "tags": [
@@ -3274,14 +3274,14 @@
   },
   {
     "id": "00-3025",
-    "name": "Gobelet à cote KRAFT/PE",
+    "name": "Gobelet à café KRAFT/PE",
     "category": "Gobelets",
     "image": "/items/00-3025.png",
     "tags": []
   },
   {
     "id": "00-3026",
-    "name": "Gobelet à cote KRAFTIPE",
+    "name": "Gobelet à café KRAFT",
     "category": "Gobelets",
     "image": "/items/00-3026.png",
     "tags": [
@@ -3290,7 +3290,7 @@
   },
   {
     "id": "00-3027",
-    "name": "Gobelet à caté KRAFT/PE",
+    "name": "Gobelet à café KRAFT",
     "category": "Gobelets",
     "image": "/items/00-3027.png",
     "tags": [
@@ -3308,21 +3308,21 @@
   },
   {
     "id": "00-3029",
-    "name": "Gobelet à caté Design",
+    "name": "Gobelet à café Design",
     "category": "Gobelets",
     "image": "/items/00-3029.png",
     "tags": []
   },
   {
     "id": "00-3031",
-    "name": "Gobelet a cate Design",
+    "name": "Gobelet à café Design",
     "category": "Gobelets",
     "image": "/items/00-3031.png",
     "tags": []
   },
   {
     "id": "00-3032",
-    "name": "Gobelet à café Dasign",
+    "name": "Gobelet à café Design",
     "category": "Gobelets",
     "image": "/items/00-3032.png",
     "tags": [
@@ -3367,7 +3367,7 @@
   },
   {
     "id": "00-3037",
-    "name": "Couvercis Gobelet PS",
+    "name": "Couvercle Gobelet PS",
     "category": "Gobelets",
     "image": "/items/00-3037.png",
     "tags": [
@@ -3376,7 +3376,7 @@
   },
   {
     "id": "00-3038",
-    "name": "Couvercle Gobelet kratt",
+    "name": "Couvercle Gobelet kraft",
     "category": "Gobelets",
     "image": "/items/00-3038.png",
     "tags": []
@@ -3402,7 +3402,7 @@
   },
   {
     "id": "00-3041",
-    "name": "Couvercie Gobelet kraît",
+    "name": "Couvercle Gobelet kraft",
     "category": "Gobelets",
     "image": "/items/00-3041.png",
     "tags": [
@@ -3420,7 +3420,7 @@
   },
   {
     "id": "00-3043",
-    "name": "Couvercle Gobele! PS",
+    "name": "Couvercle Gobelet PS",
     "category": "Autres",
     "image": "/items/00-3043.png",
     "tags": [
@@ -3457,7 +3457,7 @@
   },
   {
     "id": "00-3047",
-    "name": "Couvercle Gobelet kraît",
+    "name": "Couvercle Gobelet kraft",
     "category": "Gobelets",
     "image": "/items/00-3047.png",
     "tags": [
@@ -3591,7 +3591,7 @@
   },
   {
     "id": "00-3064",
-    "name": "Film etirable",
+    "name": "Film étirable",
     "category": "Autres",
     "image": "/items/00-3064.png",
     "tags": [
@@ -3600,7 +3600,7 @@
   },
   {
     "id": "00-3065",
-    "name": "Flm etrrable",
+    "name": "Film étirable",
     "category": "Autres",
     "image": "/items/00-3065.png",
     "tags": [
@@ -3609,7 +3609,7 @@
   },
   {
     "id": "00-3066",
-    "name": "Film étrable",
+    "name": "Film étirable",
     "category": "Autres",
     "image": "/items/00-3066.png",
     "tags": [
@@ -3618,7 +3618,7 @@
   },
   {
     "id": "00-3067",
-    "name": "Film etirable",
+    "name": "Film étirable",
     "category": "Autres",
     "image": "/items/00-3067.png",
     "tags": [
@@ -3627,7 +3627,7 @@
   },
   {
     "id": "00-3068",
-    "name": "Film étrrable",
+    "name": "Film étirable",
     "category": "Autres",
     "image": "/items/00-3068.png",
     "tags": [
@@ -3636,7 +3636,7 @@
   },
   {
     "id": "00-3069",
-    "name": "Fitm etrable",
+    "name": "Film étirable",
     "category": "Autres",
     "image": "/items/00-3069.png",
     "tags": [
@@ -3645,7 +3645,7 @@
   },
   {
     "id": "00-3070",
-    "name": "Film etrable Machine",
+    "name": "Film étirable Machine",
     "category": "Autres",
     "image": "/items/00-3070.png",
     "tags": [
@@ -3654,7 +3654,7 @@
   },
   {
     "id": "00-3071",
-    "name": "Film abmentaire",
+    "name": "Film alimentaire",
     "category": "Autres",
     "image": "/items/00-3071.png",
     "tags": [
@@ -3663,7 +3663,7 @@
   },
   {
     "id": "00-3072",
-    "name": "Film almentaire",
+    "name": "Film alimentaire",
     "category": "Autres",
     "image": "/items/00-3072.png",
     "tags": [
@@ -3672,7 +3672,7 @@
   },
   {
     "id": "00-3073",
-    "name": "Fiim abmentaire",
+    "name": "Film alimentaire",
     "category": "Autres",
     "image": "/items/00-3073.png",
     "tags": [
@@ -3681,7 +3681,7 @@
   },
   {
     "id": "00-3074",
-    "name": "Fim alimentaire",
+    "name": "Film alimentaire",
     "category": "Autres",
     "image": "/items/00-3074.png",
     "tags": [
@@ -3708,7 +3708,7 @@
   },
   {
     "id": "00-3077",
-    "name": "Distributeur papter",
+    "name": "Distributeur papier",
     "category": "Autres",
     "image": "/items/00-3077.png",
     "tags": []
@@ -3724,14 +3724,14 @@
   },
   {
     "id": "00-3079",
-    "name": "Orstributeur de bobine",
+    "name": "Distributeur de bobine",
     "category": "Autres",
     "image": "/items/00-3079.png",
     "tags": []
   },
   {
     "id": "00-3080",
-    "name": "Oistributeur d'Essule-Mains",
+    "name": "Distributeur d'Essuie-Mains",
     "category": "Autres",
     "image": "/items/00-3080.png",
     "tags": [
@@ -3793,7 +3793,7 @@
   },
   {
     "id": "00-3088",
-    "name": "Rouleaux paprer",
+    "name": "Rouleaux papier",
     "category": "Autres",
     "image": "/items/00-3088.png",
     "tags": [
@@ -3992,7 +3992,7 @@
   },
   {
     "id": "00-3117",
-    "name": "Rouleaux papier 1hermique",
+    "name": "Rouleaux papier thermique",
     "category": "Autres",
     "image": "/items/00-3117.png",
     "tags": [
@@ -4035,14 +4035,14 @@
   },
   {
     "id": "00-3122",
-    "name": "Ruban adhesit",
+    "name": "Ruban adhesif",
     "category": "Autres",
     "image": "/items/00-3122.png",
     "tags": []
   },
   {
     "id": "00-3123",
-    "name": "Ruban adhesit",
+    "name": "Ruban adhesif",
     "category": "Autres",
     "image": "/items/00-3123.png",
     "tags": []
@@ -4146,10 +4146,10 @@
     "tags": []
   },
   {
-    "id": "00-3138",
+    "id": "00-3139",
     "name": "Sachets plastiques",
     "category": "Sachets",
-    "image": "/items/00-3138.png",
+    "image": "/items/00-3139.png",
     "tags": []
   },
   {
@@ -4217,7 +4217,7 @@
   },
   {
     "id": "00-3149",
-    "name": "À er",
+    "name": "Sachets plastiques",
     "category": "Autres",
     "image": "/items/00-3149.png",
     "tags": []
@@ -4266,7 +4266,7 @@
   },
   {
     "id": "00-3158",
-    "name": "Bete",
+    "name": "Sacs poubelle",
     "category": "Autres",
     "image": "/items/00-3158.png",
     "tags": [
@@ -4514,14 +4514,14 @@
   },
   {
     "id": "00-3203",
-    "name": "Glow - Detergent textile Marseil",
+    "name": "Glow - Detergent textile Marseille",
     "category": "Autres",
     "image": "/items/00-3203.png",
     "tags": []
   },
   {
     "id": "00-3205",
-    "name": "Dasty - Dégraissant mulb-usages",
+    "name": "Dasty - Dégraissant multi-usages",
     "category": "Autres",
     "image": "/items/00-3205.png",
     "tags": []
@@ -4535,14 +4535,14 @@
   },
   {
     "id": "00-3209",
-    "name": "Te 00",
+    "name": "Glax - Graisses & Brillance",
     "category": "Autres",
     "image": "/items/00-3209.png",
     "tags": []
   },
   {
     "id": "00-3210",
-    "name": "Ax - Désintectant multi-",
+    "name": "Glax - Désintfectant multi-usages",
     "category": "Autres",
     "image": "/items/00-3210.png",
     "tags": []
@@ -4567,7 +4567,7 @@
   },
   {
     "id": "00-3215",
-    "name": "RC Clean Rins - Produit de",
+    "name": "IN - Nettoyant Multi-Usages",
     "category": "Autres",
     "image": "/items/00-3215.png",
     "tags": [
@@ -4583,7 +4583,7 @@
   },
   {
     "id": "00-3217",
-    "name": "IN Nettoyant Mult-Usages",
+    "name": "IN Nettoyant Multi-Usages",
     "category": "Autres",
     "image": "/items/00-3217.png",
     "tags": []
@@ -4606,7 +4606,7 @@
   },
   {
     "id": "00-3243",
-    "name": "Tz 3",
+    "name": "IN - Nettoyant Multi-Usages",
     "category": "Autres",
     "image": "/items/00-3243.png",
     "tags": [
@@ -4615,7 +4615,7 @@
   },
   {
     "id": "00-3244",
-    "name": "Pre 2",
+    "name": "IN - Nettoyant Multi-Usages",
     "category": "Autres",
     "image": "/items/00-3244.png",
     "tags": [
@@ -4623,26 +4623,26 @@
     ]
   },
   {
-    "id": "00-5030",
-    "name": "Gobelet a cafe Design",
+    "id": "00-3030",
+    "name": "Gobelet a café Design",
     "category": "Gobelets",
-    "image": "/items/00-5030.png",
+    "image": "/items/00-3030.png",
     "tags": [
       "8OZ"
     ]
   },
   {
-    "id": "00-5166",
+    "id": "00-3186",
     "name": "Masques jetables",
     "category": "Autres",
-    "image": "/items/00-5166.png",
+    "image": "/items/00-3186.png",
     "tags": []
   },
   {
-    "id": "00-8080",
+    "id": "00-3080",
     "name": "Pailles",
     "category": "Autres",
-    "image": "/items/00-8080.png",
+    "image": "/items/00-3080.png",
     "tags": [
       "210MM",
       "CARTON"
