@@ -24,7 +24,7 @@ export default function RootLayout({
         <CartProvider>
           <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
             {/* Top Bar */}
-            <div className="top-bar">
+            <a href="#footer" className="top-bar" style={{ textDecoration: 'none' }}>
               <div className="top-bar-ticker">
                 {/* First group */}
                 <div className="top-bar-group">
@@ -65,7 +65,7 @@ export default function RootLayout({
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
 
             {/* Main Header */}
             <header className="site-header">
@@ -84,23 +84,23 @@ export default function RootLayout({
             </main>
 
             {/* Footer */}
-            <footer className="site-footer">
+            <footer id="footer" className="site-footer">
               <div className="footer-contact">
                 <div className="footer-contact-item">
                   <Clock size={20} />
                   <span className="footer-contact-label">Horaires</span>
                   <span className="footer-contact-value">7/7 de 10h à 18h</span>
                 </div>
-                <div className="footer-contact-item">
+                <a href="tel:+32488432633" className="footer-contact-item" style={{ cursor: 'pointer' }}>
                   <Phone size={20} />
                   <span className="footer-contact-label">Téléphone</span>
                   <span className="footer-contact-value">+32 488 432 633</span>
-                </div>
-                <div className="footer-contact-item">
+                </a>
+                <a href="mailto:rayanback.belgium@gmail.com" className="footer-contact-item" style={{ cursor: 'pointer' }}>
                   <Mail size={20} />
                   <span className="footer-contact-label">Email</span>
                   <span className="footer-contact-value">rayanback.belgium@gmail.com</span>
-                </div>
+                </a>
               </div>
               <div style={{ marginTop: '24px' }}>
                 &copy; {new Date().getFullYear()} RAYAN BACK. Tous droits réservés.
