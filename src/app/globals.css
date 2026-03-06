@@ -223,18 +223,12 @@ a {
   padding: 24px;
   flex-shrink: 0;
   border-right: 1px solid var(--border);
-  position: fixed;
+  position: sticky;
   top: calc(var(--top-bar-height) + var(--header-height) - 1px);
   height: calc(100vh - var(--top-bar-height) - var(--header-height) + 1px);
   overflow-y: auto;
   z-index: 95;
   background-color: var(--background);
-}
-
-@media (min-width: 768px) {
-  .sidebar-desktop {
-    display: block;
-  }
 }
 
 @media (min-width: 768px) {
@@ -369,7 +363,6 @@ a {
 @media (min-width: 768px) {
   .catalog-main {
     padding: 32px;
-    margin-left: 250px;
     /* Room for fixed sidebar */
   }
 }
