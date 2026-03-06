@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import CatalogManager from '@/components/CatalogManager';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import { Truck, Clock, ShieldCheck } from 'lucide-react';
 
 export default function Home() {
   // Read local database.json 
@@ -25,7 +26,32 @@ export default function Home() {
 
   return (
     <>
-      <CatalogManager initialData={data} />
+      {/* Hero Banner Section */}
+      <div className="hero-banner">
+        <div className="hero-content">
+          <div className="hero-badge">🇧🇪 Grossiste N°1 en Belgique</div>
+          <h1 className="hero-title">L'emballage professionnel, <span>livré demain.</span></h1>
+          <p className="hero-subtitle">
+            Commandez aujourd'hui avant 16h, recevez votre marchandise dès demain partout en Belgique. Large choix de contenants et accessoires pour votre activité.
+          </p>
+          <div className="hero-features">
+            <div className="feature"><Truck size={20} /> Livraison Express</div>
+            <div className="feature"><Clock size={20} /> Service Rapide</div>
+            <div className="feature"><ShieldCheck size={20} /> Qualité Pro</div>
+          </div>
+          <a
+            href="#catalog-section"
+            className="hero-cta"
+            style={{ display: 'inline-block', textDecoration: 'none' }}
+          >
+            Découvrir le catalogue
+          </a>
+        </div>
+      </div>
+
+      <div id="catalog-section">
+        <CatalogManager initialData={data} />
+      </div>
 
       {/* Floating WhatsApp Button */}
       <FloatingWhatsApp />

@@ -8,8 +8,8 @@ import HeaderCartButton from '@/components/HeaderCartButton'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'RAYAN-PACK',
-  description: 'Catalogue de produits d\'emballage et accessoires',
+  title: 'Rayan Back | Grossiste Emballage Belgique',
+  description: 'Commandez aujourd\'hui, livré demain. Grossiste en emballage alimentaire et accessoires pour professionnels en Belgique.',
 }
 
 export default function RootLayout({
@@ -24,14 +24,11 @@ export default function RootLayout({
           <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
             {/* Main Header */}
             <header className="site-header">
-              <div className="site-logo">
-                <Image
-                  src="/logo.png"
-                  alt="RAYAN-BACK Logo"
-                  fill
-                  style={{ objectFit: 'contain', objectPosition: 'left' }}
-                  priority
-                />
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <span style={{ fontSize: 'clamp(18px, 4vw, 24px)', fontWeight: 900, letterSpacing: '-0.5px', lineHeight: 1 }}>RAYAN BACK</span>
+                <span style={{ fontSize: 'clamp(10px, 2vw, 13px)', fontWeight: 500, color: 'rgba(255,255,255,0.8)', marginTop: '4px' }}>
+                  Commandez aujourd'hui, livré demain en Belgique
+                </span>
               </div>
 
               <HeaderCartButton />

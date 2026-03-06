@@ -9,7 +9,7 @@ export default function FloatingWhatsApp() {
 
     return (
         <a
-            href="https://wa.me/33600000000?text=Bonjour,%20j'ai%20une%20question%20sur%20le%20catalogue."
+            href="https://wa.me/32488432633?text=Bonjour,%20j'ai%20une%20question%20sur%20le%20catalogue."
             target="_blank"
             rel="noopener noreferrer"
             style={{
