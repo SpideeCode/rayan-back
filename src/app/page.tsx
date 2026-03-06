@@ -32,7 +32,7 @@ export default function Home() {
           <div className="hero-badge">🇧🇪 Grossiste N°1 en Belgique</div>
           <h1 className="hero-title">L'emballage professionnel, <span>livré demain.</span></h1>
           <p className="hero-subtitle">
-            Commandez aujourd'hui avant 16h, recevez votre marchandise dès demain partout en Belgique. Large choix de contenants et accessoires pour votre activité.
+            Commandez aujourd'hui avant 18h, recevez votre marchandise dès demain partout en Belgique. Large choix de contenants et accessoires pour votre activité.
           </p>
           <div className="hero-features">
             <div className="feature"><Truck size={20} /> Livraison Express</div>

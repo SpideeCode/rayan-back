@@ -79,7 +79,7 @@ export default function CartDrawer() {
     const handleWhatsApp = () => {
         if (items.length === 0) return;
 
-        const phoneNumber = "33600000000"; // Placeholder phone number
+        const phoneNumber = "32488432633"; // Rayan Back phone number
 
         let message = `Bonjour, je souhaite commander les articles suivants :\n\n`;
 
