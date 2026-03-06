@@ -103,6 +103,7 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
                             value={search}
                             onChange={(e) => { setSearch(e.target.value); setVisibleCount(20); }}
                             className="search-input"
+                            suppressHydrationWarning
                         />
                     </div>
 
