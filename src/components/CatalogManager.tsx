@@ -3,7 +3,7 @@ import { useState, useMemo, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import ProductCard, { Product } from './ProductCard';
 import Sidebar from './Sidebar';
-import { Search } from 'lucide-react';
+import { Search, Filter } from 'lucide-react';
 
 export default function CatalogManager({ initialData }: { initialData: Product[] }) {
     const [search, setSearch] = useState('');
@@ -106,18 +106,33 @@ export default function CatalogManager({ initialData }: { initialData: Product[]
                         />
                     </div>
 
-                    {/* Sort Dropdown */}
-                    <div style={{ flexShrink: 0, width: '100%' }} className="sort-dropdown-wrapper">
-                        <select
-                            value={sortBy}
-                            onChange={(e) => { setSortBy(e.target.value); setVisibleCount(20); }}
-                            className="sort-select"
-                        >
-                            <option value="id-asc">Référence (0 - 9)</option>
-                            <option value="id-desc">Référence (9 - 0)</option>
-                            <option value="name-asc">Nom (A - Z)</option>
-                            <option value="name-desc">Nom (Z - A)</option>
-                        </select>
+                    {/* Sort and Category Filters */}
+                    <div className="filter-row">
+                        <div className="filter-select-wrapper">
+                            <select
+                                value={category}
+                                onChange={(e) => { setCategory(e.target.value); setVisibleCount(20); }}
+                                className="filter-select mobile-only"
+                            >
+                                <option value="Toutes">Toutes les catégories</option>
+                                {categories.map(c => (
+                                    <option key={c} value={c}>{c}</option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <div className="filter-select-wrapper">
+                            <select
+                                value={sortBy}
+                                onChange={(e) => { setSortBy(e.target.value); setVisibleCount(20); }}
+                                className="filter-select"
+                            >
+                                <option value="id-asc">Référence (0 - 9)</option>
+                                <option value="id-desc">Référence (9 - 0)</option>
+                                <option value="name-asc">Nom (A - Z)</option>
+                                <option value="name-desc">Nom (Z - A)</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 

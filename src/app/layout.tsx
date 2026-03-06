@@ -25,21 +25,45 @@ export default function RootLayout({
           <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
             {/* Top Bar */}
             <div className="top-bar">
-              <div className="top-bar-item">
-                <Package size={14} />
-                <span>Tous types d'emballages et vente en gros</span>
-              </div>
-              <div className="top-bar-item hide-mobile">
-                <Clock size={14} />
-                <span>7/7 de 10h à 18h</span>
-              </div>
-              <div className="top-bar-item hide-mobile">
-                <Phone size={14} />
-                <span>+32 488 432 633</span>
-              </div>
-              <div className="top-bar-item hide-mobile">
-                <Mail size={14} />
-                <span>rayanback.belgium@gmail.com</span>
+              <div className="top-bar-ticker">
+                {/* First group */}
+                <div className="top-bar-group">
+                  <div className="top-bar-item">
+                    <Package size={14} />
+                    <span>Tous types d'emballages et vente en gros</span>
+                  </div>
+                  <div className="top-bar-item">
+                    <Clock size={14} />
+                    <span>7/7 de 10h à 18h</span>
+                  </div>
+                  <div className="top-bar-item">
+                    <Phone size={14} />
+                    <span>+32 488 432 633</span>
+                  </div>
+                  <div className="top-bar-item">
+                    <Mail size={14} />
+                    <span>rayanback.belgium@gmail.com</span>
+                  </div>
+                </div>
+                {/* Second group (duplicate for seamless loop) */}
+                <div className="top-bar-group" aria-hidden="true">
+                  <div className="top-bar-item">
+                    <Package size={14} />
+                    <span>Tous types d'emballages et vente en gros</span>
+                  </div>
+                  <div className="top-bar-item">
+                    <Clock size={14} />
+                    <span>7/7 de 10h à 18h</span>
+                  </div>
+                  <div className="top-bar-item">
+                    <Phone size={14} />
+                    <span>+32 488 432 633</span>
+                  </div>
+                  <div className="top-bar-item">
+                    <Mail size={14} />
+                    <span>rayanback.belgium@gmail.com</span>
+                  </div>
+                </div>
               </div>
             </div>
 
