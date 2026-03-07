@@ -121,7 +121,7 @@
   },
   {
     "id": "00-2506",
-    "name": "Boite menu",
+    "name": "Boîte menu",
     "category": "Boîtes",
     "image": "/items/00-2506.png"
   },
@@ -145,19 +145,19 @@
   },
   {
     "id": "00-2510",
-    "name": "Boite nouilles (fold-top)",
+    "name": "Boîte nouilles (fold-top)",
     "category": "Boîtes",
     "image": "/items/00-2510.png"
   },
   {
     "id": "00-2511",
-    "name": "Boîte nouilles (fold-top}",
+    "name": "Boîte nouilles (fold-top)",
     "category": "Boîtes",
     "image": "/items/00-2511.png"
   },
   {
     "id": "00-2512",
-    "name": "Boîte nourlles (fold-top)",
+    "name": "Boîte nouilles (fold-top)",
     "category": "Boîtes",
     "image": "/items/00-2512.png"
   },
@@ -169,7 +169,7 @@
   },
   {
     "id": "00-2516",
-    "name": "Boite doner",
+    "name": "Boîte doner",
     "category": "Boîtes",
     "image": "/items/00-2516.png"
   },
@@ -193,13 +193,13 @@
   },
   {
     "id": "00-2521",
-    "name": "Boîte pautet (snack)",
+    "name": "Boîte poulet (snack)",
     "category": "Boîtes",
     "image": "/items/00-2521.png"
   },
   {
     "id": "00-2522",
-    "name": "Boite poulet (snack)",
+    "name": "Boîte poulet (snack)",
     "category": "Boîtes",
     "image": "/items/00-2522.png"
   },
@@ -223,13 +223,13 @@
   },
   {
     "id": "00-2529",
-    "name": "Boite à hamburger",
+    "name": "Boîte à hamburger",
     "category": "Boîtes",
     "image": "/items/00-2529.png"
   },
   {
     "id": "00-2533",
-    "name": "Boite à hamburger",
+    "name": "Boîte à hamburger",
     "category": "Boîtes",
     "image": "/items/00-2533.png"
   },
@@ -367,13 +367,13 @@
   },
   {
     "id": "00-2577",
-    "name": "Barquette a frites Blanc",
+    "name": "Barquette à frites Blanc",
     "category": "Barquettes & Raviers",
     "image": "/items/00-2577.png"
   },
   {
     "id": "00-2578",
-    "name": "Barquette a frites Blanc",
+    "name": "Barquette à frites Blanc",
     "category": "Barquettes & Raviers",
     "image": "/items/00-2578.png"
   },
@@ -949,7 +949,7 @@
   },
   {
     "id": "00-2710",
-    "name": "Couvercle barquette micro-onde",
+    "name": "Couvercle barquette micro-ondes",
     "category": "Couvercles",
     "image": "/items/00-2710.png"
   },
@@ -1105,7 +1105,7 @@
   },
   {
     "id": "00-2739",
-    "name": "Cuillère à caté PP",
+    "name": "Cuillère à café PP",
     "category": "Couverts",
     "image": "/items/00-2739.png"
   },
@@ -1135,7 +1135,7 @@
   },
   {
     "id": "00-2744",
-    "name": "Cuillère à caté PP",
+    "name": "Cuillère à café PP",
     "category": "Couverts",
     "image": "/items/00-2744.png"
   },
@@ -1165,7 +1165,7 @@
   },
   {
     "id": "00-2749",
-    "name": "Cuillère a café PS",
+    "name": "Cuillère à café PS",
     "category": "Couverts",
     "image": "/items/00-2749.png"
   },
@@ -1189,7 +1189,7 @@
   },
   {
     "id": "00-2753",
-    "name": "Cuillère à caté en bois",
+    "name": "Cuillère à café en bois",
     "category": "Couverts",
     "image": "/items/00-2753.png"
   },
@@ -1279,7 +1279,7 @@
   },
   {
     "id": "00-2769",
-    "name": "Bâtonnets cafe",
+    "name": "Bâtonnets café",
     "category": "Accessoires",
     "image": "/items/00-2769.png"
   },
@@ -1309,7 +1309,7 @@
   },
   {
     "id": "00-2775",
-    "name": "Serviettes de",
+    "name": "Serviettes de table",
     "category": "Papiers & Hygiène",
     "image": "/items/00-2775.png"
   },
@@ -1357,7 +1357,7 @@
   },
   {
     "id": "00-2784",
-    "name": "Serviettes de [able",
+    "name": "Serviettes de table",
     "category": "Papiers & Hygiène",
     "image": "/items/00-2784.png"
   },
@@ -1603,7 +1603,7 @@
   },
   {
     "id": "00-2829",
-    "name": "Couvercle Barquete aluminium",
+    "name": "Couvercle Barquette aluminium",
     "category": "Couvercles",
     "image": "/items/00-2829.png"
   },
@@ -1615,7 +1615,7 @@
   },
   {
     "id": "00-2831",
-    "name": "Couvercle barquette a",
+    "name": "Couvercle barquette aluminium",
     "category": "Couvercles",
     "image": "/items/00-2831.png"
   },
@@ -1627,7 +1627,7 @@
   },
   {
     "id": "00-2834",
-    "name": "Barquette aluninium relevé",
+    "name": "Barquette aluminium relevé",
     "category": "Barquettes & Raviers",
     "image": "/items/00-2834.png"
   },
@@ -1645,13 +1645,13 @@
   },
   {
     "id": "00-2837",
-    "name": "Couvercle barquette atuminium",
+    "name": "Couvercle barquette aluminium",
     "category": "Couvercles",
     "image": "/items/00-2837.png"
   },
   {
     "id": "00-2838",
-    "name": "Barquette atunimum relevé",
+    "name": "Barquette aluminium relevé",
     "category": "Barquettes & Raviers",
     "image": "/items/00-2838.png"
   },
@@ -1717,7 +1717,7 @@
   },
   {
     "id": "00-2850",
-    "name": "Barquette slumimuuns ronde",
+    "name": "Barquette aluminium ronde",
     "category": "Barquettes & Raviers",
     "image": "/items/00-2850.png"
   },
@@ -1909,7 +1909,7 @@
   },
   {
     "id": "00-2902",
-    "name": "Sachets à pistoiets",
+    "name": "Sachets à pistolets",
     "category": "Sachets & Sacs",
     "image": "/items/00-2902.png"
   },
@@ -2017,7 +2017,7 @@
   },
   {
     "id": "00-2946",
-    "name": "Boîtes a pizza SC",
+    "name": "Boîtes à pizza SC",
     "category": "Boîtes",
     "image": "/items/00-2946.png"
   },
@@ -2029,13 +2029,13 @@
   },
   {
     "id": "00-2949",
-    "name": "Boites à pizza SC",
+    "name": "Boîtes à pizza SC",
     "category": "Boîtes",
     "image": "/items/00-2949.png"
   },
   {
     "id": "00-2950",
-    "name": "Boîtes 3 prza SC",
+    "name": "Boîtes à pizza SC",
     "category": "Boîtes",
     "image": "/items/00-2950.png"
   },
@@ -2059,7 +2059,7 @@
   },
   {
     "id": "00-2956",
-    "name": "Boites à pizza SC",
+    "name": "Boîtes à pizza SC",
     "category": "Boîtes",
     "image": "/items/00-2956.png"
   },
@@ -2299,19 +2299,19 @@
   },
   {
     "id": "00-3014",
-    "name": "Gobelet Kratt Brun",
+    "name": "Gobelet Kraft Brun",
     "category": "Gobelets",
     "image": "/items/00-3014.png"
   },
   {
     "id": "00-3015",
-    "name": "Gabelet Kraft Brun",
+    "name": "Gobelet Kraft Brun",
     "category": "Gobelets",
     "image": "/items/00-3015.png"
   },
   {
     "id": "00-3016",
-    "name": "Gobelet Kraft Orun",
+    "name": "Gobelet Kraft Brun",
     "category": "Gobelets",
     "image": "/items/00-3016.png"
   },
@@ -2329,7 +2329,7 @@
   },
   {
     "id": "00-3020",
-    "name": "Gobetet Kraft Blanc",
+    "name": "Gobelet Kraft Blanc",
     "category": "Gobelets",
     "image": "/items/00-3020.png"
   },
@@ -2341,19 +2341,19 @@
   },
   {
     "id": "00-3022",
-    "name": "Gobelet Kratt Blanc",
+    "name": "Gobelet Kraft Blanc",
     "category": "Gobelets",
     "image": "/items/00-3022.png"
   },
   {
     "id": "00-3023",
-    "name": "Gobelet à coté kraft",
+    "name": "Gobelet à café kraft",
     "category": "Gobelets",
     "image": "/items/00-3023.png"
   },
   {
     "id": "00-3024",
-    "name": "Gobelet a café KRAFT/PE",
+    "name": "Gobelet à café KRAFT/PE",
     "category": "Gobelets",
     "image": "/items/00-3024.png"
   },
@@ -2377,7 +2377,7 @@
   },
   {
     "id": "00-3028",
-    "name": "Gobelet à caté Design",
+    "name": "Gobelet à café Design",
     "category": "Gobelets",
     "image": "/items/00-3028.png"
   },
@@ -3103,7 +3103,7 @@
   },
   {
     "id": "00-3164",
-    "name": "Snes poubelle",
+    "name": "Sacs poubelle",
     "category": "Entretien",
     "image": "/items/00-3164.png"
   },
@@ -3115,7 +3115,7 @@
   },
   {
     "id": "00-3167",
-    "name": "Gants d'hygiene jetables",
+    "name": "Gants d'hygiène jetables",
     "category": "Entretien",
     "image": "/items/00-3167.png"
   },
@@ -3139,7 +3139,7 @@
   },
   {
     "id": "00-3171",
-    "name": "Gants d'hygiene jetables",
+    "name": "Gants d'hygiène jetables",
     "category": "Entretien",
     "image": "/items/00-3171.png"
   },
@@ -3151,13 +3151,13 @@
   },
   {
     "id": "00-3176",
-    "name": "Gants d'hygiene jetables",
+    "name": "Gants d'hygiène jetables",
     "category": "Entretien",
     "image": "/items/00-3176.png"
   },
   {
     "id": "00-3177",
-    "name": "Gants d'hygiene jetables",
+    "name": "Gants d'hygiène jetables",
     "category": "Entretien",
     "image": "/items/00-3177.png"
   },
@@ -3175,7 +3175,7 @@
   },
   {
     "id": "00-3181",
-    "name": "Gants d'hygrene jetables",
+    "name": "Gants d'hygiène jetables",
     "category": "Entretien",
     "image": "/items/00-3181.png"
   },
@@ -3235,7 +3235,7 @@
   },
   {
     "id": "00-3199",
-    "name": "Eponge",
+    "name": "Éponge",
     "category": "Entretien",
     "image": "/items/00-3199.png"
   },
@@ -3247,13 +3247,13 @@
   },
   {
     "id": "00-3201",
-    "name": "Eponge",
+    "name": "Éponge",
     "category": "Entretien",
     "image": "/items/00-3201.png"
   },
   {
     "id": "00-3202",
-    "name": "Eponge inox",
+    "name": "Éponge inox",
     "category": "Entretien",
     "image": "/items/00-3202.png"
   },
@@ -3283,7 +3283,7 @@
   },
   {
     "id": "00-3210",
-    "name": "Glax - Désintfectant multi-usages",
+    "name": "Glax - Désinfectant multi-usages",
     "category": "Entretien",
     "image": "/items/00-3210.png"
   },
@@ -3295,7 +3295,7 @@
   },
   {
     "id": "00-3212",
-    "name": "IN — Nettoyant muit-usages",
+    "name": "IN — Nettoyant multi-usages",
     "category": "Entretien",
     "image": "/items/00-3212.png"
   },
@@ -3343,7 +3343,7 @@
   },
   {
     "id": "00-3030",
-    "name": "Gobelet a café Design",
+    "name": "Gobelet à café Design",
     "category": "Gobelets",
     "image": "/items/00-3030.png"
   },
