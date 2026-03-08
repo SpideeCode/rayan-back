@@ -11,6 +11,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Rayan Back | Grossiste Emballage Belgique',
   description: 'Commandez aujourd\'hui, livré demain. Grossiste en emballage alimentaire et accessoires pour professionnels en Belgique.',
+  icons: {
+    icon: '/logo-tab.png',
+  },
 }
 
 export default function RootLayout({
